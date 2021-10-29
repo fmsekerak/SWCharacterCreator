@@ -28,7 +28,8 @@ Player’s Handbook (Introduction | PHB | SW5E).
                  <br /> <br />
                 The basic functions of the project will include the ability to insert character information like name, race,
 class etc. They will be able to edit this data at any time, and if need be delete it. They will be able to
-search and filter their characters by race, classes, etc.                <br /> <br />
+search and filter their characters by race, classes, etc.
+                <br /> <br />
                 The advanced functions of the project will be things not offered in the currently released version of this.
 One major thing not included is Multiclassing. Multiclassing is the ability for a character to have more
 than one class. This is very difficult to implement because there are certain features bound to only one
