@@ -83,7 +83,7 @@
         <asp:ListItem Value="6">Neutral Dark</asp:ListItem>
         <asp:ListItem Value="7">Chaotic Light</asp:ListItem>
         <asp:ListItem Value="8">Chaotic Balanced</asp:ListItem>
-        <asp:ListItem Value="9">Chaotic Darks</asp:ListItem>
+        <asp:ListItem Value="9">Chaotic Dark</asp:ListItem>
     </asp:DropDownList>
 
     <br />
@@ -119,10 +119,10 @@
                       </asp:DropDownList>
                 </asp:TableCell>
                 <asp:TableCell runat="Server" BorderWidth="2" BorderColor="Sandybrown" HorizontalAlign="Center">
-                    2
+                    -
                 </asp:TableCell>
                 <asp:TableCell runat="Server" BorderWidth="2" BorderColor="Sandybrown" HorizontalAlign="Center">
-                    3
+                    -
                 </asp:TableCell>
            </asp:TableRow>
 
@@ -142,10 +142,10 @@
                       </asp:DropDownList>
                 </asp:TableCell>
                 <asp:TableCell runat="Server" BorderWidth="2" BorderColor="Sandybrown" HorizontalAlign="Center">
-                    2
+                    -
                 </asp:TableCell>
                 <asp:TableCell runat="Server" BorderWidth="2" BorderColor="Sandybrown" HorizontalAlign="Center">
-                    3
+                    -
                 </asp:TableCell>
         </asp:TableRow>
 
@@ -165,10 +165,10 @@
                       </asp:DropDownList>
                 </asp:TableCell>
                 <asp:TableCell runat="Server" BorderWidth="2" BorderColor="Sandybrown" HorizontalAlign="Center">
-                    2
+                    -
                 </asp:TableCell>
                 <asp:TableCell runat="Server" BorderWidth="2" BorderColor="Sandybrown" HorizontalAlign="Center">
-                    3
+                    -
                 </asp:TableCell>
         </asp:TableRow>
 
@@ -188,10 +188,10 @@
                       </asp:DropDownList>
                 </asp:TableCell>
                 <asp:TableCell runat="Server" BorderWidth="2" BorderColor="Sandybrown" HorizontalAlign="Center">
-                    2
+                    -
                 </asp:TableCell>
                 <asp:TableCell runat="Server" BorderWidth="2" BorderColor="Sandybrown" HorizontalAlign="Center">
-                    3
+                    -
                 </asp:TableCell>
         </asp:TableRow>
 
@@ -211,10 +211,10 @@
                       </asp:DropDownList>
                 </asp:TableCell>
                 <asp:TableCell runat="Server" BorderWidth="2" BorderColor="Sandybrown" HorizontalAlign="Center">
-                    2
+                    -
                 </asp:TableCell>
                 <asp:TableCell runat="Server" BorderWidth="2" BorderColor="Sandybrown" HorizontalAlign="Center">
-                    3
+                    -
                 </asp:TableCell>
         </asp:TableRow>
 
@@ -234,10 +234,10 @@
                       </asp:DropDownList>
                 </asp:TableCell>
                 <asp:TableCell runat="Server" BorderWidth="2" BorderColor="Sandybrown" HorizontalAlign="Center">
-                    2
+                    -
                 </asp:TableCell>
                 <asp:TableCell runat="Server" BorderWidth="2" BorderColor="Sandybrown" HorizontalAlign="Center">
-                    3
+                    -
                 </asp:TableCell>
         </asp:TableRow>
 
