@@ -11,6 +11,10 @@ namespace SWCharacterCreator.Account
 {
     public partial class Register : Page
     {
+        MySql.Data.MySqlClient.MySqlConnection conn;
+        MySql.Data.MySqlClient.MySqlCommand cmd;
+        String queryStr;
+
         protected void CreateUser_Click(object sender, EventArgs e)
         {
             var manager = Context.GetOwinContext().GetUserManager<ApplicationUserManager>();
@@ -32,5 +36,29 @@ namespace SWCharacterCreator.Account
                 ErrorMessage.Text = result.Errors.FirstOrDefault();
             }
         }
+
+        protected void registerEventMethod(object sender, EventArgs e)
+        {
+            registerUser();
+        }
+
+        protected void registerUser()
+        {
+            String connString = System.Configuration.ConfigurationManager.ConnectionStrings["SWCCStr"].ToString();
+
+            conn = new MySql.Data.MySqlClient.MySqlConnection(connString);
+
+            conn.Open();
+
+            queryStr = "INSERT INTO swccdb.accounts(email, pw)" + 
+                "VALUES('" + Email.Text + "','" + Password.Text + "')";
+
+            cmd = new MySql.Data.MySqlClient.MySqlCommand(queryStr, conn);
+
+            cmd.ExecuteReader();
+
+            conn.Close();
+        }
     }
+
 }
