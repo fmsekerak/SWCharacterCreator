@@ -86,6 +86,130 @@
         <asp:ListItem Value="9">Chaotic Darks</asp:ListItem>
     </asp:DropDownList>
 
+    <br />
+    <h4> Choose Ability Scores: </h4>
+    <asp:Table ID="AbilityScores" runat="Server" BorderColor="Sandybrown" BorderStyle="Solid" BorderWidth="2" Height="100" Width="600">
+            <asp:TableRow ID="Row1" runat="Server" BorderColor="Sandybrown">
+                <asp:TableCell runat="Server" BorderWidth="2" BorderColor="Sandybrown" HorizontalAlign="Center">
+                    Ability Scores
+                </asp:TableCell>
+                <asp:TableCell runat="Server" BorderWidth="2" BorderColor="Sandybrown" HorizontalAlign="Center">
+                    Choose Score
+                </asp:TableCell>
+                <asp:TableCell runat="Server" BorderWidth="2" BorderColor="Sandybrown" HorizontalAlign="Center">
+                    Racial Bonus
+                </asp:TableCell>
+                <asp:TableCell runat="Server" BorderWidth="2" BorderColor="Sandybrown" HorizontalAlign="Center">
+                    Total Score
+                </asp:TableCell>
+           </asp:TableRow>
+           <asp:TableRow ID="TableRow1" runat="Server" BorderColor="Sandybrown">
+                <asp:TableCell runat="Server" BorderWidth="2" BorderColor="Sandybrown" HorizontalAlign="Center">
+                    Strength
+                </asp:TableCell>
+                  <asp:TableCell runat="Server" BorderWidth="2" BorderColor="Sandybrown" HorizontalAlign="Center">
+                    1
+                </asp:TableCell>
+                <asp:TableCell runat="Server" BorderWidth="2" BorderColor="Sandybrown" HorizontalAlign="Center">
+                    2
+                </asp:TableCell>
+                <asp:TableCell runat="Server" BorderWidth="2" BorderColor="Sandybrown" HorizontalAlign="Center">
+                    3
+                </asp:TableCell>
+           </asp:TableRow>
+
+        <asp:TableRow ID="TableRow2" runat="Server" BorderColor="Sandybrown">
+            <asp:TableCell runat="Server" BorderWidth="2" BorderColor="Sandybrown" HorizontalAlign="Center">
+                    Dexterity
+                </asp:TableCell>
+             <asp:TableCell runat="Server" BorderWidth="2" BorderColor="Sandybrown" HorizontalAlign="Center">
+                    1
+                </asp:TableCell>
+                <asp:TableCell runat="Server" BorderWidth="2" BorderColor="Sandybrown" HorizontalAlign="Center">
+                    2
+                </asp:TableCell>
+                <asp:TableCell runat="Server" BorderWidth="2" BorderColor="Sandybrown" HorizontalAlign="Center">
+                    3
+                </asp:TableCell>
+        </asp:TableRow>
+
+         <asp:TableRow ID="TableRow3" runat="Server" BorderColor="Sandybrown">
+             <asp:TableCell runat="Server" BorderWidth="2" BorderColor="Sandybrown" HorizontalAlign="Center">
+                    Constitution
+                </asp:TableCell>
+              <asp:TableCell runat="Server" BorderWidth="2" BorderColor="Sandybrown" HorizontalAlign="Center">
+                    1
+                </asp:TableCell>
+                <asp:TableCell runat="Server" BorderWidth="2" BorderColor="Sandybrown" HorizontalAlign="Center">
+                    2
+                </asp:TableCell>
+                <asp:TableCell runat="Server" BorderWidth="2" BorderColor="Sandybrown" HorizontalAlign="Center">
+                    3
+                </asp:TableCell>
+        </asp:TableRow>
+
+         <asp:TableRow ID="TableRow4" runat="Server" BorderColor="Sandybrown">
+              <asp:TableCell runat="Server" BorderWidth="2" BorderColor="Sandybrown" HorizontalAlign="Center">
+                    Intelligence
+                </asp:TableCell>
+              <asp:TableCell runat="Server" BorderWidth="2" BorderColor="Sandybrown" HorizontalAlign="Center">
+                    1
+                </asp:TableCell>
+                <asp:TableCell runat="Server" BorderWidth="2" BorderColor="Sandybrown" HorizontalAlign="Center">
+                    2
+                </asp:TableCell>
+                <asp:TableCell runat="Server" BorderWidth="2" BorderColor="Sandybrown" HorizontalAlign="Center">
+                    3
+                </asp:TableCell>
+        </asp:TableRow>
+
+         <asp:TableRow ID="TableRow5" runat="Server" BorderColor="Sandybrown">
+              <asp:TableCell runat="Server" BorderWidth="2" BorderColor="Sandybrown" HorizontalAlign="Center">
+                    Wisdom
+                </asp:TableCell>
+              <asp:TableCell runat="Server" BorderWidth="2" BorderColor="Sandybrown" HorizontalAlign="Center">
+                    1
+                </asp:TableCell>
+                <asp:TableCell runat="Server" BorderWidth="2" BorderColor="Sandybrown" HorizontalAlign="Center">
+                    2
+                </asp:TableCell>
+                <asp:TableCell runat="Server" BorderWidth="2" BorderColor="Sandybrown" HorizontalAlign="Center">
+                    3
+                </asp:TableCell>
+        </asp:TableRow>
+
+         <asp:TableRow ID="TableRow6" runat="Server" BorderColor="Sandybrown">
+              <asp:TableCell runat="Server" BorderWidth="2" BorderColor="Sandybrown" HorizontalAlign="Center">
+                    Wisdom
+                </asp:TableCell>
+              <asp:TableCell runat="Server" BorderWidth="2" BorderColor="Sandybrown" HorizontalAlign="Center">
+                    1
+                </asp:TableCell>
+                <asp:TableCell runat="Server" BorderWidth="2" BorderColor="Sandybrown" HorizontalAlign="Center">
+                    2
+                </asp:TableCell>
+                <asp:TableCell runat="Server" BorderWidth="2" BorderColor="Sandybrown" HorizontalAlign="Center">
+                    3
+                </asp:TableCell>
+        </asp:TableRow>
+
+         <asp:TableRow ID="TableRow7" runat="Server" BorderColor="Sandybrown">
+              <asp:TableCell runat="Server" BorderWidth="2" BorderColor="Sandybrown" HorizontalAlign="Center">
+                    Charisma
+                </asp:TableCell>
+              <asp:TableCell runat="Server" BorderWidth="2" BorderColor="Sandybrown" HorizontalAlign="Center">
+                    1
+                </asp:TableCell>
+                <asp:TableCell runat="Server" BorderWidth="2" BorderColor="Sandybrown" HorizontalAlign="Center">
+                    2
+                </asp:TableCell>
+                <asp:TableCell runat="Server" BorderWidth="2" BorderColor="Sandybrown" HorizontalAlign="Center">
+                    3
+                </asp:TableCell>
+        </asp:TableRow>
+
+    </asp:Table>
+    
 </asp:Content>
 
 
