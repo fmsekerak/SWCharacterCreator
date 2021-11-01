@@ -108,7 +108,15 @@
                     Strength
                 </asp:TableCell>
                   <asp:TableCell runat="Server" BorderWidth="2" BorderColor="Sandybrown" HorizontalAlign="Center">
-                    1
+                      <asp:DropDownList ID="StrengthDrop" runat="server">
+                          <asp:ListItem Value="1">8</asp:ListItem>
+                          <asp:ListItem Value="2">10</asp:ListItem>
+                          <asp:ListItem Value="3">12</asp:ListItem>
+                          <asp:ListItem Value="4">14</asp:ListItem>
+                          <asp:ListItem Value="5">16</asp:ListItem>
+                          <asp:ListItem Value="6">18</asp:ListItem>
+                          <asp:ListItem Value="7">20</asp:ListItem>
+                      </asp:DropDownList>
                 </asp:TableCell>
                 <asp:TableCell runat="Server" BorderWidth="2" BorderColor="Sandybrown" HorizontalAlign="Center">
                     2
@@ -123,7 +131,15 @@
                     Dexterity
                 </asp:TableCell>
              <asp:TableCell runat="Server" BorderWidth="2" BorderColor="Sandybrown" HorizontalAlign="Center">
-                    1
+                    <asp:DropDownList ID="DexterityDrop" runat="server">
+                          <asp:ListItem Value="1">8</asp:ListItem>
+                          <asp:ListItem Value="2">10</asp:ListItem>
+                          <asp:ListItem Value="3">12</asp:ListItem>
+                          <asp:ListItem Value="4">14</asp:ListItem>
+                          <asp:ListItem Value="5">16</asp:ListItem>
+                          <asp:ListItem Value="6">18</asp:ListItem>
+                          <asp:ListItem Value="7">20</asp:ListItem>
+                      </asp:DropDownList>
                 </asp:TableCell>
                 <asp:TableCell runat="Server" BorderWidth="2" BorderColor="Sandybrown" HorizontalAlign="Center">
                     2
@@ -138,7 +154,15 @@
                     Constitution
                 </asp:TableCell>
               <asp:TableCell runat="Server" BorderWidth="2" BorderColor="Sandybrown" HorizontalAlign="Center">
-                    1
+                    <asp:DropDownList ID="ConstitutionDrop" runat="server">
+                          <asp:ListItem Value="1">8</asp:ListItem>
+                          <asp:ListItem Value="2">10</asp:ListItem>
+                          <asp:ListItem Value="3">12</asp:ListItem>
+                          <asp:ListItem Value="4">14</asp:ListItem>
+                          <asp:ListItem Value="5">16</asp:ListItem>
+                          <asp:ListItem Value="6">18</asp:ListItem>
+                          <asp:ListItem Value="7">20</asp:ListItem>
+                      </asp:DropDownList>
                 </asp:TableCell>
                 <asp:TableCell runat="Server" BorderWidth="2" BorderColor="Sandybrown" HorizontalAlign="Center">
                     2
@@ -153,7 +177,15 @@
                     Intelligence
                 </asp:TableCell>
               <asp:TableCell runat="Server" BorderWidth="2" BorderColor="Sandybrown" HorizontalAlign="Center">
-                    1
+                    <asp:DropDownList ID="IntelligenceDrop" runat="server">
+                          <asp:ListItem Value="1">8</asp:ListItem>
+                          <asp:ListItem Value="2">10</asp:ListItem>
+                          <asp:ListItem Value="3">12</asp:ListItem>
+                          <asp:ListItem Value="4">14</asp:ListItem>
+                          <asp:ListItem Value="5">16</asp:ListItem>
+                          <asp:ListItem Value="6">18</asp:ListItem>
+                          <asp:ListItem Value="7">20</asp:ListItem>
+                      </asp:DropDownList>
                 </asp:TableCell>
                 <asp:TableCell runat="Server" BorderWidth="2" BorderColor="Sandybrown" HorizontalAlign="Center">
                     2
@@ -168,22 +200,15 @@
                     Wisdom
                 </asp:TableCell>
               <asp:TableCell runat="Server" BorderWidth="2" BorderColor="Sandybrown" HorizontalAlign="Center">
-                    1
-                </asp:TableCell>
-                <asp:TableCell runat="Server" BorderWidth="2" BorderColor="Sandybrown" HorizontalAlign="Center">
-                    2
-                </asp:TableCell>
-                <asp:TableCell runat="Server" BorderWidth="2" BorderColor="Sandybrown" HorizontalAlign="Center">
-                    3
-                </asp:TableCell>
-        </asp:TableRow>
-
-         <asp:TableRow ID="TableRow6" runat="Server" BorderColor="Sandybrown">
-              <asp:TableCell runat="Server" BorderWidth="2" BorderColor="Sandybrown" HorizontalAlign="Center">
-                    Wisdom
-                </asp:TableCell>
-              <asp:TableCell runat="Server" BorderWidth="2" BorderColor="Sandybrown" HorizontalAlign="Center">
-                    1
+                    <asp:DropDownList ID="WisdomDrop" runat="server">
+                          <asp:ListItem Value="1">8</asp:ListItem>
+                          <asp:ListItem Value="2">10</asp:ListItem>
+                          <asp:ListItem Value="3">12</asp:ListItem>
+                          <asp:ListItem Value="4">14</asp:ListItem>
+                          <asp:ListItem Value="5">16</asp:ListItem>
+                          <asp:ListItem Value="6">18</asp:ListItem>
+                          <asp:ListItem Value="7">20</asp:ListItem>
+                      </asp:DropDownList>
                 </asp:TableCell>
                 <asp:TableCell runat="Server" BorderWidth="2" BorderColor="Sandybrown" HorizontalAlign="Center">
                     2
@@ -198,7 +223,15 @@
                     Charisma
                 </asp:TableCell>
               <asp:TableCell runat="Server" BorderWidth="2" BorderColor="Sandybrown" HorizontalAlign="Center">
-                    1
+                    <asp:DropDownList ID="CharismaDrop" runat="server">
+                          <asp:ListItem Value="1">8</asp:ListItem>
+                          <asp:ListItem Value="2">10</asp:ListItem>
+                          <asp:ListItem Value="3">12</asp:ListItem>
+                          <asp:ListItem Value="4">14</asp:ListItem>
+                          <asp:ListItem Value="5">16</asp:ListItem>
+                          <asp:ListItem Value="6">18</asp:ListItem>
+                          <asp:ListItem Value="7">20</asp:ListItem>
+                      </asp:DropDownList>
                 </asp:TableCell>
                 <asp:TableCell runat="Server" BorderWidth="2" BorderColor="Sandybrown" HorizontalAlign="Center">
                     2
