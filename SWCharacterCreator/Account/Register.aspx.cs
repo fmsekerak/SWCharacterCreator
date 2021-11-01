@@ -14,6 +14,7 @@ namespace SWCharacterCreator.Account
         MySql.Data.MySqlClient.MySqlConnection conn;
         MySql.Data.MySqlClient.MySqlCommand cmd;
         String queryStr;
+        String userip;
 
         protected void CreateUser_Click(object sender, EventArgs e)
         {
@@ -39,12 +40,17 @@ namespace SWCharacterCreator.Account
 
         protected void registerEventMethod(object sender, EventArgs e)
         {
-            registerUser();
+            registerUser(out userip);
         }
+      
 
-        protected void registerUser()
+        protected void registerUser(out string userip)
         {
-            String connString = System.Configuration.ConfigurationManager.ConnectionStrings["SWCCStr"].ToString();
+            userip = Request.UserHostAddress;
+            
+
+            String connString = "server=" + userip +";User ID=webuser;Password=1234;Database=swccdb;";
+                //System.Configuration.ConfigurationManager.ConnectionStrings["SWCCStr"].ToString();
 
             conn = new MySql.Data.MySqlClient.MySqlConnection(connString);
 

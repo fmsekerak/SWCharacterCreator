@@ -15,6 +15,7 @@ namespace SWCharacterCreator.Account
         MySql.Data.MySqlClient.MySqlDataReader reader;
         String queryStr;
         String emailStr;
+        String userip;
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -31,9 +32,19 @@ namespace SWCharacterCreator.Account
 
         protected void LogIn(object sender, EventArgs e)
         {
+            loginUser(out userip);
+        }
+
+        protected void loginUser(out string userip)
+        {
+            userip = Request.UserHostAddress;
+
             if (IsValid)
             {
-                String connString = System.Configuration.ConfigurationManager.ConnectionStrings["SWCCStr"].ToString();
+                String connString = "server=" + userip + ";User ID=webuser;Password=1234;Database=swccdb;";
+
+
+                //System.Configuration.ConfigurationManager.ConnectionStrings["SWCCStr"].ToString();
                 conn = new MySql.Data.MySqlClient.MySqlConnection(connString);
                 conn.Open();
 
@@ -62,7 +73,7 @@ namespace SWCharacterCreator.Account
                 }
 
                 reader.Close();
-                conn.Close();           
+                conn.Close();
             }
         }
     }
