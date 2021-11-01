@@ -10,16 +10,22 @@ namespace SWCharacterCreator.Account
 {
     public partial class Login : Page
     {
+        MySql.Data.MySqlClient.MySqlConnection conn;
+        MySql.Data.MySqlClient.MySqlCommand cmd;
+        MySql.Data.MySqlClient.MySqlDataReader reader;
+        String queryStr;
+        String emailStr;
+
         protected void Page_Load(object sender, EventArgs e)
         {
             RegisterHyperLink.NavigateUrl = "Register";
             // Enable this once you have account confirmation enabled for password reset functionality
             //ForgotPasswordHyperLink.NavigateUrl = "Forgot";
-            OpenAuthLogin.ReturnUrl = Request.QueryString["ReturnUrl"];
-            var returnUrl = HttpUtility.UrlEncode(Request.QueryString["ReturnUrl"]);
+            OpenAuthLogin.ReturnUrl = Request.QueryString["Default.aspx"];
+            var returnUrl = HttpUtility.UrlEncode(Request.QueryString["Default.aspx"]);
             if (!String.IsNullOrEmpty(returnUrl))
             {
-                RegisterHyperLink.NavigateUrl += "?ReturnUrl=" + returnUrl;
+                RegisterHyperLink.NavigateUrl += "?Default.aspx=" + returnUrl;
             }
         }
 
@@ -27,34 +33,36 @@ namespace SWCharacterCreator.Account
         {
             if (IsValid)
             {
-                // Validate the user password
-                var manager = Context.GetOwinContext().GetUserManager<ApplicationUserManager>();
-                var signinManager = Context.GetOwinContext().GetUserManager<ApplicationSignInManager>();
+                String connString = System.Configuration.ConfigurationManager.ConnectionStrings["SWCCStr"].ToString();
+                conn = new MySql.Data.MySqlClient.MySqlConnection(connString);
+                conn.Open();
 
-                // This doen't count login failures towards account lockout
-                // To enable password failures to trigger lockout, change to shouldLockout: true
-                var result = signinManager.PasswordSignIn(Email.Text, Password.Text, RememberMe.Checked, shouldLockout: false);
+                queryStr = "SELECT * FROM swccdb.accounts " +
+                    "WHERE email='" + Email.Text + "' AND pw='" + Password.Text + "'";
+                cmd = new MySql.Data.MySqlClient.MySqlCommand(queryStr, conn);
 
-                switch (result)
+                reader = cmd.ExecuteReader();
+                emailStr = "";
+
+                while (reader.HasRows && reader.Read())
                 {
-                    case SignInStatus.Success:
-                        IdentityHelper.RedirectToReturnUrl(Request.QueryString["ReturnUrl"], Response);
-                        break;
-                    case SignInStatus.LockedOut:
-                        Response.Redirect("/Account/Lockout");
-                        break;
-                    case SignInStatus.RequiresVerification:
-                        Response.Redirect(String.Format("/Account/TwoFactorAuthenticationSignIn?ReturnUrl={0}&RememberMe={1}", 
-                                                        Request.QueryString["ReturnUrl"],
-                                                        RememberMe.Checked),
-                                          true);
-                        break;
-                    case SignInStatus.Failure:
-                    default:
-                        FailureText.Text = "Invalid login attempt";
-                        ErrorMessage.Visible = true;
-                        break;
+                    emailStr = reader.GetString(reader.GetOrdinal("email"));
                 }
+
+                if (reader.HasRows)
+                {
+                    Session["useremail"] = emailStr;
+                    Response.BufferOutput = true;
+                    Response.Redirect("~/CharacterCreator.aspx");
+                }
+                else
+                {
+                    FailureText.Text = "Invalid login attempt";
+                    ErrorMessage.Visible = true;
+                }
+
+                reader.Close();
+                conn.Close();           
             }
         }
     }
