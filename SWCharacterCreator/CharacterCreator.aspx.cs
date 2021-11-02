@@ -16,7 +16,7 @@ namespace SWCharacterCreator
 
         protected void submitClick(object sender, EventArgs e)
         {
-         
+
         }
     }
 }
