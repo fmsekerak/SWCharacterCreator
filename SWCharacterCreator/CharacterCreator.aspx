@@ -8,82 +8,82 @@
     <asp:TextBox id="nameField" runat="server"/> <br/> <br />
     <h4> Choose a species: </h4>
     <asp:DropDownList ID="speciesSelect" name="speciesSelect" runat="server">
-        <asp:ListItem Value="1">Bith</asp:ListItem>
-        <asp:ListItem Value="2">Bothan</asp:ListItem>
-        <asp:ListItem Value="3">Cathar</asp:ListItem>
-        <asp:ListItem Value="4">Cerean</asp:ListItem>
-        <asp:ListItem Value="5">Chiss</asp:ListItem>
-        <asp:ListItem Value="6">Devaronian</asp:ListItem>
-        <asp:ListItem Value="7">Droid, Class I</asp:ListItem>
-        <asp:ListItem Value="8">Droid, Class II</asp:ListItem>
-        <asp:ListItem Value="9">Droid, Class III</asp:ListItem>
-        <asp:ListItem Value="10">Droid, Class IV</asp:ListItem>
-        <asp:ListItem Value="11">Droid, Class V</asp:ListItem>
-        <asp:ListItem Value="12">Duros</asp:ListItem>
-        <asp:ListItem Value="13">Ewok</asp:ListItem>
-        <asp:ListItem Value="14">Gamorrean</asp:ListItem>
-        <asp:ListItem Value="15">Gungan</asp:ListItem>
-        <asp:ListItem Value="16">Human</asp:ListItem>
-        <asp:ListItem Value="17">Ithorian</asp:ListItem>
-        <asp:ListItem Value="18">Jawa</asp:ListItem>
-        <asp:ListItem Value="19">Kel Dor</asp:ListItem>
-        <asp:ListItem Value="20">Mon Calamari</asp:ListItem>
-        <asp:ListItem Value="21">Nautolan</asp:ListItem>
-        <asp:ListItem Value="22">Rodian</asp:ListItem>
-        <asp:ListItem Value="23">Sith Pureblood</asp:ListItem>
-        <asp:ListItem Value="24">Togruta</asp:ListItem>
-        <asp:ListItem Value="25">Trandoshan</asp:ListItem>
+        <asp:ListItem Value="1" Text="Bith"></asp:ListItem>
+        <asp:ListItem Value="2" Text="Bothan"></asp:ListItem>
+        <asp:ListItem Value="3" Text="Cathar"></asp:ListItem>
+        <asp:ListItem Value="4" Text="Cerean"></asp:ListItem>
+        <asp:ListItem Value="5" Text="Chiss"></asp:ListItem>
+        <asp:ListItem Value="6" Text="Devaronian"></asp:ListItem>
+        <asp:ListItem Value="7" Text="Droid, Class I"></asp:ListItem>
+        <asp:ListItem Value="8" Text="Droid, Class II"></asp:ListItem>
+        <asp:ListItem Value="9" Text="Droid, Class III"></asp:ListItem>
+        <asp:ListItem Value="10" Text="Droid, Class IV"></asp:ListItem>
+        <asp:ListItem Value="11" Text="Droid, Class V"></asp:ListItem>
+        <asp:ListItem Value="12" Text="Duros"></asp:ListItem>
+        <asp:ListItem Value="13" Text="Ewok"></asp:ListItem>
+        <asp:ListItem Value="14" Text="Gamorrean"></asp:ListItem>
+        <asp:ListItem Value="15" Text="Gungan"></asp:ListItem>
+        <asp:ListItem Value="16" Text="Human"></asp:ListItem>
+        <asp:ListItem Value="17" Text="Ithorian"></asp:ListItem>
+        <asp:ListItem Value="18" Text="Jawa"></asp:ListItem>
+        <asp:ListItem Value="19" Text="Kel Dor"></asp:ListItem>
+        <asp:ListItem Value="20" Text="Mon Calamari"></asp:ListItem>
+        <asp:ListItem Value="21" Text="Nautolan"></asp:ListItem>
+        <asp:ListItem Value="22" Text="Rodian"></asp:ListItem>
+        <asp:ListItem Value="23" Text="Sith Pureblood"></asp:ListItem>
+        <asp:ListItem Value="24" Text="Togruta"></asp:ListItem>
+        <asp:ListItem Value="25" Text="Trandoshan"></asp:ListItem>
     </asp:DropDownList>
 
     <h4> Choose a class: </h4>
     <asp:DropDownList ID="classSelect" name="classSelect" runat="server">
-        <asp:ListItem Value="1">Berserker</asp:ListItem>
-        <asp:ListItem Value="2">Consular</asp:ListItem>
-        <asp:ListItem Value="3">Engineer</asp:ListItem>
-        <asp:ListItem Value="4">Fighter</asp:ListItem>
-        <asp:ListItem Value="5">Guardian</asp:ListItem>
-        <asp:ListItem Value="6">Monk</asp:ListItem>
-        <asp:ListItem Value="7">Operative</asp:ListItem>
-        <asp:ListItem Value="8">Scholar</asp:ListItem>
-        <asp:ListItem Value="9">Scout</asp:ListItem>
-        <asp:ListItem Value="10">Sentinel</asp:ListItem>
+        <asp:ListItem Value="1" Text="Berserker"></asp:ListItem>
+        <asp:ListItem Value="2" Text="Consular"></asp:ListItem>
+        <asp:ListItem Value="3" Text="Engineer"></asp:ListItem>
+        <asp:ListItem Value="4" Text="Fighter"></asp:ListItem>
+        <asp:ListItem Value="5" Text="Guardian"></asp:ListItem>
+        <asp:ListItem Value="6" Text="Monk"></asp:ListItem>
+        <asp:ListItem Value="7" Text="Operative"></asp:ListItem>
+        <asp:ListItem Value="8" Text="Scholar"></asp:ListItem>
+        <asp:ListItem Value="9" Text="Scout"></asp:ListItem>
+        <asp:ListItem Value="10" Text="Sentinel"></asp:ListItem>
     </asp:DropDownList>
 
     <h4> Choose a level: </h4>
     <asp:DropDownList ID="levelSelect" name="levelSelect" runat="server">
-        <asp:ListItem Value="1">1</asp:ListItem>
-        <asp:ListItem Value="2">2</asp:ListItem>
-        <asp:ListItem Value="3">3</asp:ListItem>
-        <asp:ListItem Value="4">4</asp:ListItem>
-        <asp:ListItem Value="5">5</asp:ListItem>
-        <asp:ListItem Value="6">6</asp:ListItem>
-        <asp:ListItem Value="7">7</asp:ListItem>
-        <asp:ListItem Value="8">8</asp:ListItem>
-        <asp:ListItem Value="9">9</asp:ListItem>
-        <asp:ListItem Value="10">10</asp:ListItem>
-        <asp:ListItem Value="11">11</asp:ListItem>
-        <asp:ListItem Value="12">12</asp:ListItem>
-        <asp:ListItem Value="13">13</asp:ListItem>
-        <asp:ListItem Value="14">14</asp:ListItem>
-        <asp:ListItem Value="15">15</asp:ListItem>
-        <asp:ListItem Value="16">16</asp:ListItem>
-        <asp:ListItem Value="17">17</asp:ListItem>
-        <asp:ListItem Value="18">18</asp:ListItem>
-        <asp:ListItem Value="19">19</asp:ListItem>
-        <asp:ListItem Value="20">20</asp:ListItem>
+        <asp:ListItem Value="1" Text="1"></asp:ListItem>
+        <asp:ListItem Value="2" Text="2"></asp:ListItem>
+        <asp:ListItem Value="3" Text="3"></asp:ListItem>
+        <asp:ListItem Value="4" Text="4"></asp:ListItem>
+        <asp:ListItem Value="5" Text="5"></asp:ListItem>
+        <asp:ListItem Value="6" Text="6"></asp:ListItem>
+        <asp:ListItem Value="7" Text="7"></asp:ListItem>
+        <asp:ListItem Value="8" Text="8"></asp:ListItem>
+        <asp:ListItem Value="9" Text="9"></asp:ListItem>
+        <asp:ListItem Value="10" Text="10"></asp:ListItem>
+        <asp:ListItem Value="11" Text="11"></asp:ListItem>
+        <asp:ListItem Value="12" Text="12"></asp:ListItem>
+        <asp:ListItem Value="13" Text="13"></asp:ListItem>
+        <asp:ListItem Value="14" Text="14"></asp:ListItem>
+        <asp:ListItem Value="15" Text="15"></asp:ListItem>
+        <asp:ListItem Value="16" Text="16"></asp:ListItem>
+        <asp:ListItem Value="17" Text="17"></asp:ListItem>
+        <asp:ListItem Value="18" Text="18"></asp:ListItem>
+        <asp:ListItem Value="19" Text="19"></asp:ListItem>
+        <asp:ListItem Value="20" Text="20"></asp:ListItem>
     </asp:DropDownList>
 
     <h4> Choose an alignment: </h4>
     <asp:DropDownList ID="alignmentSelect" name="alignmentSelect" runat="server">
-        <asp:ListItem Value="1">Lawful Light</asp:ListItem>
-        <asp:ListItem Value="2">Lawful Balanced</asp:ListItem>
-        <asp:ListItem Value="3">Lawful Dark</asp:ListItem>
-        <asp:ListItem Value="4">Neutral Light</asp:ListItem>
-        <asp:ListItem Value="5">Neutral Balanced</asp:ListItem>
-        <asp:ListItem Value="6">Neutral Dark</asp:ListItem>
-        <asp:ListItem Value="7">Chaotic Light</asp:ListItem>
-        <asp:ListItem Value="8">Chaotic Balanced</asp:ListItem>
-        <asp:ListItem Value="9">Chaotic Dark</asp:ListItem>
+        <asp:ListItem Value="1" Text="Lawful Light"></asp:ListItem>
+        <asp:ListItem Value="2" Text="Lawful Balanced"></asp:ListItem>
+        <asp:ListItem Value="3" Text="Lawful Dark"></asp:ListItem>
+        <asp:ListItem Value="4" Text="Neutral Light"></asp:ListItem>
+        <asp:ListItem Value="5" Text="Neutral Balanced"></asp:ListItem>
+        <asp:ListItem Value="6" Text="Neutral Dark"></asp:ListItem>
+        <asp:ListItem Value="7" Text="Chaotic Light"></asp:ListItem>
+        <asp:ListItem Value="8" Text="Chaotic Balanced"></asp:ListItem>
+        <asp:ListItem Value="9" Text="Chaotic Dark"></asp:ListItem>
     </asp:DropDownList>
 
     <br />
@@ -109,13 +109,13 @@
                 </asp:TableCell>
                   <asp:TableCell runat="Server" BorderWidth="2" BorderColor="Sandybrown" HorizontalAlign="Center">
                       <asp:DropDownList ID="StrengthDrop" runat="server">
-                          <asp:ListItem Value="1">8</asp:ListItem>
-                          <asp:ListItem Value="2">10</asp:ListItem>
-                          <asp:ListItem Value="3">12</asp:ListItem>
-                          <asp:ListItem Value="4">14</asp:ListItem>
-                          <asp:ListItem Value="5">16</asp:ListItem>
-                          <asp:ListItem Value="6">18</asp:ListItem>
-                          <asp:ListItem Value="7">20</asp:ListItem>
+                          <asp:ListItem Value="1"  Text="8"></asp:ListItem>
+                          <asp:ListItem Value="2" Text="10"></asp:ListItem>
+                          <asp:ListItem Value="3" Text="12"></asp:ListItem>
+                          <asp:ListItem Value="4" Text="14"></asp:ListItem>
+                          <asp:ListItem Value="5" Text="16"></asp:ListItem>
+                          <asp:ListItem Value="6" Text="18"></asp:ListItem>
+                          <asp:ListItem Value="7" Text="20"></asp:ListItem>
                       </asp:DropDownList>
                 </asp:TableCell>
                 <asp:TableCell runat="Server" BorderWidth="2" BorderColor="Sandybrown" HorizontalAlign="Center">
@@ -132,13 +132,13 @@
                 </asp:TableCell>
              <asp:TableCell runat="Server" BorderWidth="2" BorderColor="Sandybrown" HorizontalAlign="Center">
                     <asp:DropDownList ID="DexterityDrop" runat="server">
-                          <asp:ListItem Value="1">8</asp:ListItem>
-                          <asp:ListItem Value="2">10</asp:ListItem>
-                          <asp:ListItem Value="3">12</asp:ListItem>
-                          <asp:ListItem Value="4">14</asp:ListItem>
-                          <asp:ListItem Value="5">16</asp:ListItem>
-                          <asp:ListItem Value="6">18</asp:ListItem>
-                          <asp:ListItem Value="7">20</asp:ListItem>
+                       <asp:ListItem Value="1"  Text="8"></asp:ListItem>
+                          <asp:ListItem Value="2" Text="10"></asp:ListItem>
+                          <asp:ListItem Value="3" Text="12"></asp:ListItem>
+                          <asp:ListItem Value="4" Text="14"></asp:ListItem>
+                          <asp:ListItem Value="5" Text="16"></asp:ListItem>
+                          <asp:ListItem Value="6" Text="18"></asp:ListItem>
+                          <asp:ListItem Value="7" Text="20"></asp:ListItem>
                       </asp:DropDownList>
                 </asp:TableCell>
                 <asp:TableCell runat="Server" BorderWidth="2" BorderColor="Sandybrown" HorizontalAlign="Center">
@@ -155,13 +155,13 @@
                 </asp:TableCell>
               <asp:TableCell runat="Server" BorderWidth="2" BorderColor="Sandybrown" HorizontalAlign="Center">
                     <asp:DropDownList ID="ConstitutionDrop" runat="server">
-                          <asp:ListItem Value="1">8</asp:ListItem>
-                          <asp:ListItem Value="2">10</asp:ListItem>
-                          <asp:ListItem Value="3">12</asp:ListItem>
-                          <asp:ListItem Value="4">14</asp:ListItem>
-                          <asp:ListItem Value="5">16</asp:ListItem>
-                          <asp:ListItem Value="6">18</asp:ListItem>
-                          <asp:ListItem Value="7">20</asp:ListItem>
+                          <asp:ListItem Value="1"  Text="8"></asp:ListItem>
+                          <asp:ListItem Value="2" Text="10"></asp:ListItem>
+                          <asp:ListItem Value="3" Text="12"></asp:ListItem>
+                          <asp:ListItem Value="4" Text="14"></asp:ListItem>
+                          <asp:ListItem Value="5" Text="16"></asp:ListItem>
+                          <asp:ListItem Value="6" Text="18"></asp:ListItem>
+                          <asp:ListItem Value="7" Text="20"></asp:ListItem>
                       </asp:DropDownList>
                 </asp:TableCell>
                 <asp:TableCell runat="Server" BorderWidth="2" BorderColor="Sandybrown" HorizontalAlign="Center">
@@ -178,13 +178,13 @@
                 </asp:TableCell>
               <asp:TableCell runat="Server" BorderWidth="2" BorderColor="Sandybrown" HorizontalAlign="Center">
                     <asp:DropDownList ID="IntelligenceDrop" runat="server">
-                          <asp:ListItem Value="1">8</asp:ListItem>
-                          <asp:ListItem Value="2">10</asp:ListItem>
-                          <asp:ListItem Value="3">12</asp:ListItem>
-                          <asp:ListItem Value="4">14</asp:ListItem>
-                          <asp:ListItem Value="5">16</asp:ListItem>
-                          <asp:ListItem Value="6">18</asp:ListItem>
-                          <asp:ListItem Value="7">20</asp:ListItem>
+                          <asp:ListItem Value="1"  Text="8"></asp:ListItem>
+                          <asp:ListItem Value="2" Text="10"></asp:ListItem>
+                          <asp:ListItem Value="3" Text="12"></asp:ListItem>
+                          <asp:ListItem Value="4" Text="14"></asp:ListItem>
+                          <asp:ListItem Value="5" Text="16"></asp:ListItem>
+                          <asp:ListItem Value="6" Text="18"></asp:ListItem>
+                          <asp:ListItem Value="7" Text="20"></asp:ListItem>
                       </asp:DropDownList>
                 </asp:TableCell>
                 <asp:TableCell runat="Server" BorderWidth="2" BorderColor="Sandybrown" HorizontalAlign="Center">
@@ -201,13 +201,13 @@
                 </asp:TableCell>
               <asp:TableCell runat="Server" BorderWidth="2" BorderColor="Sandybrown" HorizontalAlign="Center">
                     <asp:DropDownList ID="WisdomDrop" runat="server">
-                          <asp:ListItem Value="1">8</asp:ListItem>
-                          <asp:ListItem Value="2">10</asp:ListItem>
-                          <asp:ListItem Value="3">12</asp:ListItem>
-                          <asp:ListItem Value="4">14</asp:ListItem>
-                          <asp:ListItem Value="5">16</asp:ListItem>
-                          <asp:ListItem Value="6">18</asp:ListItem>
-                          <asp:ListItem Value="7">20</asp:ListItem>
+                          <asp:ListItem Value="1"  Text="8"></asp:ListItem>
+                          <asp:ListItem Value="2" Text="10"></asp:ListItem>
+                          <asp:ListItem Value="3" Text="12"></asp:ListItem>
+                          <asp:ListItem Value="4" Text="14"></asp:ListItem>
+                          <asp:ListItem Value="5" Text="16"></asp:ListItem>
+                          <asp:ListItem Value="6" Text="18"></asp:ListItem>
+                          <asp:ListItem Value="7" Text="20"></asp:ListItem>
                       </asp:DropDownList>
                 </asp:TableCell>
                 <asp:TableCell runat="Server" BorderWidth="2" BorderColor="Sandybrown" HorizontalAlign="Center">
@@ -224,13 +224,13 @@
                 </asp:TableCell>
               <asp:TableCell runat="Server" BorderWidth="2" BorderColor="Sandybrown" HorizontalAlign="Center">
                     <asp:DropDownList ID="CharismaDrop" runat="server">
-                          <asp:ListItem Value="1">8</asp:ListItem>
-                          <asp:ListItem Value="2">10</asp:ListItem>
-                          <asp:ListItem Value="3">12</asp:ListItem>
-                          <asp:ListItem Value="4">14</asp:ListItem>
-                          <asp:ListItem Value="5">16</asp:ListItem>
-                          <asp:ListItem Value="6">18</asp:ListItem>
-                          <asp:ListItem Value="7">20</asp:ListItem>
+                          <asp:ListItem Value="1"  Text="8"></asp:ListItem>
+                          <asp:ListItem Value="2" Text="10"></asp:ListItem>
+                          <asp:ListItem Value="3" Text="12"></asp:ListItem>
+                          <asp:ListItem Value="4" Text="14"></asp:ListItem>
+                          <asp:ListItem Value="5" Text="16"></asp:ListItem>
+                          <asp:ListItem Value="6" Text="18"></asp:ListItem>
+                          <asp:ListItem Value="7" Text="20"></asp:ListItem>
                       </asp:DropDownList>
                 </asp:TableCell>
                 <asp:TableCell runat="Server" BorderWidth="2" BorderColor="Sandybrown" HorizontalAlign="Center">
