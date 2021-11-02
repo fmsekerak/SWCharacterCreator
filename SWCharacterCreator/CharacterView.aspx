@@ -127,6 +127,15 @@
     <asp:Button OnClick="EditCharacter" ID="EditCharacterButton" runat="server" Text="Edit">
     </asp:Button>
 
+     <asp:DropDownList ID="EditStrengthDrop" runat="server" Visible="false">
+        <asp:ListItem Value="1"  Text="8"></asp:ListItem>
+        <asp:ListItem Value="2" Text="10"></asp:ListItem>
+        <asp:ListItem Value="3" Text="12"></asp:ListItem>
+        <asp:ListItem Value="4" Text="14"></asp:ListItem>
+        <asp:ListItem Value="5" Text="16"></asp:ListItem>
+        <asp:ListItem Value="6" Text="18"></asp:ListItem>
+        <asp:ListItem Value="7" Text="20"></asp:ListItem>
+    </asp:DropDownList>
 
 
 </asp:Content>

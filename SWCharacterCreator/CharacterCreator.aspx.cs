@@ -41,6 +41,11 @@ namespace SWCharacterCreator
             Console.WriteLine("Character has been created.");       
             
         }
+
+        protected void submitButton_Command(object sender, CommandEventArgs e)
+        {
+
+        }
     }
 }
 

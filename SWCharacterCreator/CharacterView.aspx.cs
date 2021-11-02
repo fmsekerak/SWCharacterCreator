@@ -18,6 +18,7 @@ namespace SWCharacterCreator
         String charName, charSpecies, charClass, charLvl, charAlignment, charStr, charDex, charCon, charInt, charWis, charChar;
         List<string> charNames = new List<string>();
 
+        /*
         
         protected void Page_Load(object sender, EventArgs e) 
         {
