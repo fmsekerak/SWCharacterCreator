@@ -13,15 +13,15 @@ namespace SWCharacterCreator
         MySql.Data.MySqlClient.MySqlCommand cmd;
         MySql.Data.MySqlClient.MySqlDataReader reader;
         String queryStr;
-        String emailStr;
-        String acc_id;
         String userip;
-
+        String charName, charSpecies, charClass, charLvl, charAlignment, charStr, charDex, charCon, charInt, charWis, charChar;
         List<string> charNames = new List<string>();
 
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            displayCharacterSelect.Items.Clear();
+
             String connString = System.Configuration.ConfigurationManager.ConnectionStrings["SWCCStr"].ToString();
 
             //"server=" + userip + ";User ID=webuser;Password=1234;Database=swccdb;";
@@ -49,6 +49,7 @@ namespace SWCharacterCreator
             {
                 displayCharacterSelect.Items.Add(charName);
             }
+
         }
 
         protected void displayCharacter(object sender, EventArgs e)
@@ -67,17 +68,37 @@ namespace SWCharacterCreator
             cmd = new MySql.Data.MySqlClient.MySqlCommand(queryStr, conn);
 
             reader = cmd.ExecuteReader();
-            emailStr = "";
-            acc_id = "";
 
             while (reader.HasRows && reader.Read())
             {
-                
+                charName = reader.GetString(reader.GetOrdinal("charName"));
+                charSpecies = reader.GetString(reader.GetOrdinal("charSpecies"));
+                charClass = reader.GetString(reader.GetOrdinal("charClass"));
+                charLvl = reader.GetString(reader.GetOrdinal("charLvl"));
+                charAlignment = reader.GetString(reader.GetOrdinal("charAlignment"));
+                charStr = reader.GetString(reader.GetOrdinal("charStr"));
+                charDex = reader.GetString(reader.GetOrdinal("charDex"));
+                charCon = reader.GetString(reader.GetOrdinal("charCon"));
+                charInt = reader.GetString(reader.GetOrdinal("charInt"));
+                charWis = reader.GetString(reader.GetOrdinal("charWis"));
+                charChar = reader.GetString(reader.GetOrdinal("charChar"));
             }
 
             if (reader.HasRows)
             {
                 //done reading
+                DisplayName.Text = charName;
+                DisplaySpecies.Text = charSpecies;
+                DisplayClass.Text = charClass;
+                DisplayLevel.Text = charLvl;
+                DisplayAlignment.Text = charAlignment;
+                DisplayStr.Text = charStr;
+                DisplayDex.Text = charDex;
+                DisplayCon.Text = charCon;
+                DisplayInt.Text = charInt;
+                DisplayWis.Text = charWis;
+                DisplayChar.Text = charChar;
+                Response.BufferOutput = true;
             }
             else
             {
