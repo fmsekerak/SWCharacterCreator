@@ -19,8 +19,8 @@ namespace SWCharacterCreator
 
         List<string> charNames = new List<string>();
 
-
-        protected void Page_Load(object sender, EventArgs e)
+        
+        protected void Page_Load(object sender, EventArgs e) 
         {
             String connString = System.Configuration.ConfigurationManager.ConnectionStrings["SWCCStr"].ToString();
 
@@ -50,7 +50,7 @@ namespace SWCharacterCreator
                 displayCharacterSelect.Items.Add(charName);
             }
         }
-
+            
         protected void displayCharacter(object sender, EventArgs e)
         {
             String connString = System.Configuration.ConfigurationManager.ConnectionStrings["SWCCStr"].ToString();
@@ -86,6 +86,11 @@ namespace SWCharacterCreator
 
             reader.Close();
             conn.Close();
+        }
+
+        protected void deleteCharacter(object sender, EventArgs e)
+        {
+
         }
     }
 }

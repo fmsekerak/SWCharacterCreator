@@ -86,4 +86,17 @@
        </asp:TableRow>
    </asp:Table>
 
+    <br />
+    <br />
+    <h1>Character Deletion</h1>
+
+    <h4>Listed below are the characters you have created, select the one you wish to delete.</h4>
+        <br />
+    <asp:DropDownList ID="DeleteCharacterSelect" name="deleteCharacterSelect" runat="server">
+    </asp:DropDownList>
+
+    <asp:Button OnClick="deleteCharacter" ID="deleteCharacterButton" runat="server" Text="Delete">
+    </asp:Button> 
+
+
 </asp:Content>
