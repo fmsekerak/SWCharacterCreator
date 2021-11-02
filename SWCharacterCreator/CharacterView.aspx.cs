@@ -13,5 +13,10 @@ namespace SWCharacterCreator
         {
 
         }
+
+        protected void displayCharacter(object sender, EventArgs e)
+        {
+         
+        }
     }
 }
