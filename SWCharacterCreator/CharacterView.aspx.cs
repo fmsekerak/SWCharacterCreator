@@ -17,8 +17,8 @@ namespace SWCharacterCreator
         String charName, charSpecies, charClass, charLvl, charAlignment, charStr, charDex, charCon, charInt, charWis, charChar;
         List<string> charNames = new List<string>();
 
-
-        protected void Page_Load(object sender, EventArgs e)
+        
+        protected void Page_Load(object sender, EventArgs e) 
         {
             displayCharacterSelect.Items.Clear();
 
@@ -51,7 +51,7 @@ namespace SWCharacterCreator
             }
 
         }
-
+            
         protected void displayCharacter(object sender, EventArgs e)
         {
             String connString = System.Configuration.ConfigurationManager.ConnectionStrings["SWCCStr"].ToString();
@@ -107,6 +107,16 @@ namespace SWCharacterCreator
 
             reader.Close();
             conn.Close();
+        }
+
+        protected void deleteCharacter(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void EditCharacter(object sender, EventArgs e)
+        {
+
         }
     }
 }
