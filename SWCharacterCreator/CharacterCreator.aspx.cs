@@ -36,9 +36,9 @@ namespace SWCharacterCreator
             cmd = new MySql.Data.MySqlClient.MySqlCommand(queryStr, conn);
 
             cmd.ExecuteReader();
-
+            
             conn.Close();
-            Console.WriteLine("Character has been created.");
+            Console.WriteLine("Character has been created.");       
             
         }
     }

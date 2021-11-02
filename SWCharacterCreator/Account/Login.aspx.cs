@@ -15,6 +15,7 @@ namespace SWCharacterCreator.Account
         MySql.Data.MySqlClient.MySqlDataReader reader;
         String queryStr;
         String emailStr;
+        String acc_id;
         String userip;
 
         protected void Page_Load(object sender, EventArgs e)
@@ -46,6 +47,7 @@ namespace SWCharacterCreator.Account
                 //"server=" + userip + ";User ID=webuser;Password=1234;Database=swccdb;";
                 
                 conn = new MySql.Data.MySqlClient.MySqlConnection(connString);
+
                 conn.Open();
 
                 queryStr = "SELECT * FROM swccdb.accounts " +
@@ -55,15 +57,19 @@ namespace SWCharacterCreator.Account
 
                 reader = cmd.ExecuteReader();
                 emailStr = "";
+                acc_id = "";
 
                 while (reader.HasRows && reader.Read())
                 {
                     emailStr = reader.GetString(reader.GetOrdinal("email"));
+                    acc_id = reader.GetString(reader.GetOrdinal("acc_id"));
                 }
 
                 if (reader.HasRows)
                 {
+                    //done reading
                     Session["useremail"] = emailStr;
+                    Session["acc_id"] = acc_id;
                     Response.BufferOutput = true;
                     Response.Redirect("~/CharacterCreator.aspx");
                 }
