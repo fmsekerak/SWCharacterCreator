@@ -242,6 +242,10 @@
         </asp:TableRow>
 
     </asp:Table>
+
+        <br />
+    <asp:Button OnClick="submitClick" runat="server" ID="submitButton" Text="Submit">
+    </asp:Button>
     
 </asp:Content>
 
