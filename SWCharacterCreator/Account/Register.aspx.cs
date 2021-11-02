@@ -40,16 +40,32 @@ namespace SWCharacterCreator.Account
 
         protected void registerEventMethod(object sender, EventArgs e)
         {
-            registerUser(out userip);
+            registerUser();
         }
-      
 
-        protected void registerUser(out string userip)
+        protected string GetIPAddress()
         {
-            userip = Request.UserHostAddress;
-            
+            System.Web.HttpContext context = System.Web.HttpContext.Current;
+            string ipAddress = context.Request.ServerVariables["HTTP_X_FORWARDED_FOR"];
 
-            String connString = "server=" + userip +";User ID=webuser;Password=1234;Database=swccdb;";
+            if (!string.IsNullOrEmpty(ipAddress))
+            {
+                string[] addresses = ipAddress.Split(',');
+                if (addresses.Length != 0)
+                {
+                    return addresses[0];
+                }
+            }
+
+            return context.Request.ServerVariables["REMOTE_ADDR"];
+        }
+
+
+        protected void registerUser()
+        {
+            userip = GetIPAddress();            
+
+            String connString = "server=" + userip + ";User ID=webuser;Password=1234;Database=swccdb;";
                 //System.Configuration.ConfigurationManager.ConnectionStrings["SWCCStr"].ToString();
 
             conn = new MySql.Data.MySqlClient.MySqlConnection(connString);
