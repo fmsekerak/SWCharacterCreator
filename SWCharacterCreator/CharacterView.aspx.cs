@@ -14,21 +14,20 @@ namespace SWCharacterCreator
         MySql.Data.MySqlClient.MySqlDataReader reader;
         String queryStr;
         String userip;
+        String attributeEdit;
         String charName, charSpecies, charClass, charLvl, charAlignment, charStr, charDex, charCon, charInt, charWis, charChar;
         List<string> charNames = new List<string>();
-
-        /*
         
         protected void Page_Load(object sender, EventArgs e) 
         {
             displayCharacterSelect.Items.Clear();
+            DeleteCharacterSelect.Items.Clear();
+            EditCharSelectList.Items.Clear();
+
 
             String connString = System.Configuration.ConfigurationManager.ConnectionStrings["SWCCStr"].ToString();
-
             //"server=" + userip + ";User ID=webuser;Password=1234;Database=swccdb;";
-
             conn = new MySql.Data.MySqlClient.MySqlConnection(connString);
-
             conn.Open();
 
             queryStr = "SELECT charName FROM swccdb.characters";
@@ -42,26 +41,26 @@ namespace SWCharacterCreator
                 charNames.Add(reader.GetString(reader.GetOrdinal("charName")));
             }
 
-
-            reader.Close();
-            conn.Close();
-
-            foreach(string charName in charNames)
+            if (reader.HasRows)
             {
-                displayCharacterSelect.Items.Add(charName);
+                foreach(string charIndex in charNames)
+                {
+                    displayCharacterSelect.Items.Add(charIndex);
+                    DeleteCharacterSelect.Items.Add(charIndex);
+                    EditCharSelectList.Items.Add(charIndex);
+                }
             }
 
+            reader.Close();
+            conn.Close();                       
+
         }
-        */
             
         protected void displayCharacter(object sender, EventArgs e)
         {
             String connString = System.Configuration.ConfigurationManager.ConnectionStrings["SWCCStr"].ToString();
-
             //"server=" + userip + ";User ID=webuser;Password=1234;Database=swccdb;";
-
             conn = new MySql.Data.MySqlClient.MySqlConnection(connString);
-
             conn.Open();
 
             queryStr = "SELECT * FROM swccdb.characters" + 
@@ -113,12 +112,59 @@ namespace SWCharacterCreator
 
         protected void deleteCharacter(object sender, EventArgs e)
         {
+            String connString = System.Configuration.ConfigurationManager.ConnectionStrings["SWCCStr"].ToString();
+            //"server=" + userip + ";User ID=webuser;Password=1234;Database=swccdb;";
+            conn = new MySql.Data.MySqlClient.MySqlConnection(connString);
+            conn.Open();
 
+            queryStr = "DELETE FROM swccdb.characters " + 
+                       "WHERE charName='" + DeleteCharacterSelect.SelectedValue + "'";
+
+            cmd = new MySql.Data.MySqlClient.MySqlCommand(queryStr, conn);
+
+            cmd.ExecuteReader();
+            conn.Close();
         }
 
         protected void EditCharacter(object sender, EventArgs e)
         {
-        
+
+            EditStrengthDrop.Visible = true;
+
+
+            String connString = System.Configuration.ConfigurationManager.ConnectionStrings["SWCCStr"].ToString();
+            //"server=" + userip + ";User ID=webuser;Password=1234;Database=swccdb;";
+            conn = new MySql.Data.MySqlClient.MySqlConnection(connString);
+            conn.Open();
+
+            attributeEdit = EditAttributeList.SelectedValue;
+
+            queryStr = "SELECT * FROM swccdb.characters " +
+                       "WHERE charName='" + EditCharSelectList.SelectedValue + "'";
+
+            cmd = new MySql.Data.MySqlClient.MySqlCommand(queryStr, conn);
+
+            reader = cmd.ExecuteReader();
+
+            while (reader.HasRows && reader.Read())
+            {
+                charName = reader.GetString(reader.GetOrdinal("charName"));
+                charSpecies = reader.GetString(reader.GetOrdinal("charSpecies"));
+                charClass = reader.GetString(reader.GetOrdinal("charClass"));
+                charLvl = reader.GetString(reader.GetOrdinal("charLvl"));
+                charAlignment = reader.GetString(reader.GetOrdinal("charAlignment"));
+                charStr = reader.GetString(reader.GetOrdinal("charStr"));
+                charDex = reader.GetString(reader.GetOrdinal("charDex"));
+                charCon = reader.GetString(reader.GetOrdinal("charCon"));
+                charInt = reader.GetString(reader.GetOrdinal("charInt"));
+                charWis = reader.GetString(reader.GetOrdinal("charWis"));
+                charChar = reader.GetString(reader.GetOrdinal("charChar"));
+            }
+
+
+            reader.Close();
+            conn.Close();
+            
         }
     }
 }
