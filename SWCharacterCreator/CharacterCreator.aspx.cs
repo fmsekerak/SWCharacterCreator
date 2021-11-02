@@ -38,6 +38,7 @@ namespace SWCharacterCreator
             cmd.ExecuteReader();
 
             conn.Close();
+            Console.WriteLine("Character has been created.");
             
         }
     }
