@@ -6,7 +6,6 @@
 
     <br />
     <asp:DropDownList ID="displayCharacterSelect" name="displayCharacterSelect" runat="server">
-        <asp:ListItem Value="1" Text="Bith"></asp:ListItem>
     </asp:DropDownList>
 
   <asp:Button OnClick="displayCharacter" ID="displayCharacterButton" runat="server" Text="Display">
