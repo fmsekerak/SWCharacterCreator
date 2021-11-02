@@ -303,12 +303,12 @@ namespace SWCharacterCreator
         protected global::System.Web.UI.WebControls.Button EditCharacterButton;
 
         /// <summary>
-        /// StrengthDrop control.
+        /// EditStrengthDrop control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList StrengthDrop;
+        protected global::System.Web.UI.WebControls.DropDownList EditStrengthDrop;
     }
 }
