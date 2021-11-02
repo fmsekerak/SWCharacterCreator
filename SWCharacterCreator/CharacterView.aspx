@@ -137,5 +137,10 @@
         <asp:ListItem Value="7" Text="20"></asp:ListItem>
     </asp:DropDownList>
 
+    <br />
+    <br />
+    <asp:Button OnClick="SubmitEditCharacter" ID="SubmitEditButton" runat="server" Text="Submit Changes">
+    </asp:Button>
+
 
 </asp:Content>

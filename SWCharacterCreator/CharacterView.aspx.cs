@@ -166,5 +166,10 @@ namespace SWCharacterCreator
             conn.Close();
             
         }
+        
+        protected void SubmitEditCharacter(object sender, EventArgs e)
+        {
+
+        }
     }
 }
