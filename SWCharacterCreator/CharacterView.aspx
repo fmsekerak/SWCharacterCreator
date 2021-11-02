@@ -4,5 +4,12 @@
 
     <h4>Listed below are the characters you have created!</h4>
 
+    <br />
+    <asp:DropDownList ID="displayCharacterSelect" name="displayCharacterSelect" runat="server">
+        <asp:ListItem Value="1" Text="Bith"></asp:ListItem>
+    </asp:DropDownList>
+
+  <asp:Button OnClick="displayCharacter" ID="displayCharacterButton" runat="server" Text="Display">
+    </asp:Button> 
 
 </asp:Content>
