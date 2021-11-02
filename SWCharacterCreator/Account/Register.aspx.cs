@@ -65,8 +65,8 @@ namespace SWCharacterCreator.Account
         {
             userip = GetIPAddress();            
 
-            String connString = "server=" + userip + ";User ID=webuser;Password=1234;Database=swccdb;";
-                //System.Configuration.ConfigurationManager.ConnectionStrings["SWCCStr"].ToString();
+            String connString = System.Configuration.ConfigurationManager.ConnectionStrings["SWCCStr"].ToString();
+            //"server=" + userip + ";User ID=webuser;Password=1234;Database=swccdb;";
 
             conn = new MySql.Data.MySqlClient.MySqlConnection(connString);
 
