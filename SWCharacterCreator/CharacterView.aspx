@@ -96,7 +96,37 @@
     </asp:DropDownList>
 
     <asp:Button OnClick="deleteCharacter" ID="deleteCharacterButton" runat="server" Text="Delete">
-    </asp:Button> 
+    </asp:Button>
+
+    <br />
+    <br />
+    <h1>Edit Character</h1>
+
+    <h4>Listed below are the characters you have created, select the one you wish to edit.</h4>
+    <h4>Then select which attribute you wish to edit.</h4> 
+    <br />
+    <asp:DropDownList ID="EditCharSelectList" name="EditCharSelect" runat="server">
+    </asp:DropDownList>
+
+    <br /> <br />
+    <asp:DropDownList ID="EditAttributeList" name="EditAttrSelect" runat="server">
+        <asp:ListItem Value="1"  Text="Name"></asp:ListItem>
+        <asp:ListItem Value="2" Text="Species"></asp:ListItem>
+        <asp:ListItem Value="3" Text="Class"></asp:ListItem>
+        <asp:ListItem Value="4" Text="Level"></asp:ListItem>
+        <asp:ListItem Value="5" Text="Alignment"></asp:ListItem>
+        <asp:ListItem Value="6" Text="Strength"></asp:ListItem>
+        <asp:ListItem Value="7" Text="Dexterity"></asp:ListItem>
+        <asp:ListItem Value="8" Text="Constitution"></asp:ListItem>
+        <asp:ListItem Value="9" Text="Intelligence"></asp:ListItem>
+        <asp:ListItem Value="10" Text="Wisdom"></asp:ListItem>
+        <asp:ListItem Value="11" Text="Charisma"></asp:ListItem>
+    </asp:DropDownList>
+
+    <br /> <br />
+    <asp:Button OnClick="EditCharacter" ID="EditCharacterButton" runat="server" Text="Edit">
+    </asp:Button>
+
 
 
 </asp:Content>

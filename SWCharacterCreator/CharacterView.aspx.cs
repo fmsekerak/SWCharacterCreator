@@ -92,5 +92,10 @@ namespace SWCharacterCreator
         {
 
         }
+
+        protected void EditCharacter(object sender, EventArgs e)
+        {
+
+        }
     }
 }
