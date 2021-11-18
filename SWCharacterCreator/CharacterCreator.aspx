@@ -5,7 +5,7 @@
 
     <p> Welcome to the Star Wars 5e Character Creator. Please fill out the below form to create your character!</p> <br />
     <h4> Character Name: </h4> 
-    <asp:TextBox id="nameField" runat="server"/> <br/> <br />
+    <asp:TextBox id="nameField" runat="server"/> <br/>
     <h4> Choose a species: </h4>
     <asp:DropDownList ID="speciesSelect" name="speciesSelect" runat="server">
         <asp:ListItem Value="1" Text="Bith"></asp:ListItem>
@@ -243,7 +243,32 @@
 
     </asp:Table>
 
+        <h4> Choose a backgroud: </h4>
+        <asp:DropDownList ID="backgroundselect" name="backgroundSelect" runat="server">
+        <asp:ListItem Value="1" Text="Agent"></asp:ListItem>
+        <asp:ListItem Value="2" Text="Bounty Hunter"></asp:ListItem>
+        <asp:ListItem Value="3" Text="Criminal"></asp:ListItem>
+        <asp:ListItem Value="4" Text="Entertainer"></asp:ListItem>
+        <asp:ListItem Value="5" Text="Force Adept"></asp:ListItem>
+        <asp:ListItem Value="6" Text="Gambler"></asp:ListItem>
+        <asp:ListItem Value="7" Text="Investigator"></asp:ListItem>
+        <asp:ListItem Value="8" Text="Jedi"></asp:ListItem>
+        <asp:ListItem Value="9" Text="Mandalorian"></asp:ListItem>
+        <asp:ListItem Value="10" Text="Mercenary"></asp:ListItem>
+        <asp:ListItem Value="11" Text="Noble"></asp:ListItem>
+        <asp:ListItem Value="12" Text="Nomand"></asp:ListItem>
+        <asp:ListItem Value="13" Text="Outlaw"></asp:ListItem>
+        <asp:ListItem Value="14" Text="Pirate"></asp:ListItem>
+        <asp:ListItem Value="15" Text="Scientist"></asp:ListItem>
+        <asp:ListItem Value="16" Text="Scoundrel"></asp:ListItem>
+        <asp:ListItem Value="17" Text="Sith"></asp:ListItem>
+        <asp:ListItem Value="18" Text="Smuggler"></asp:ListItem>
+        <asp:ListItem Value="19" Text="Soldier"></asp:ListItem>
+        <asp:ListItem Value="20" Text="Spacer"></asp:ListItem>
+        </asp:DropDownList>
+
         <br />
+
     <asp:Button OnClick="submitClick" runat="server" ID="submitButton" Text="Submit">
     </asp:Button>
     
