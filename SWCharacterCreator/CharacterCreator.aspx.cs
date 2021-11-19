@@ -12,6 +12,7 @@ namespace SWCharacterCreator
         MySql.Data.MySqlClient.MySqlConnection conn;
         MySql.Data.MySqlClient.MySqlCommand cmd;
         String queryStr;
+        String acc_id;
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -28,10 +29,12 @@ namespace SWCharacterCreator
             conn = new MySql.Data.MySqlClient.MySqlConnection(connString);
             conn.Open();
 
-            queryStr = "INSERT INTO swccdb.characters(charName, charSpecies, charClass, charLvl, charAlignment, charStr, charDex, charCon, charInt, charWis, charChar)" +
+            acc_id = (String)Session["acc_id"];
+
+            queryStr = "INSERT INTO swccdb.characters(charName, charSpecies, charClass, charLvl, charAlignment, charStr, charDex, charCon, charInt, charWis, charChar, acc_id)" +
             "VALUES('" + nameField.Text + "','" + speciesSelect.SelectedItem.Text + "','" + classSelect.SelectedItem.Text + "','" + levelSelect.SelectedItem.Text + "','" + alignmentSelect.SelectedItem.Text + 
             "','" + StrengthDrop.SelectedItem.Text + "','" + DexterityDrop.SelectedItem.Text + "','" + ConstitutionDrop.SelectedItem.Text + "','" + IntelligenceDrop.SelectedItem.Text + 
-            "','" + WisdomDrop.SelectedItem.Text + "','" + CharismaDrop.SelectedItem.Text + "')";
+            "','" + WisdomDrop.SelectedItem.Text + "','" + CharismaDrop.SelectedItem.Text + "','" + acc_id + "')";
 
             cmd = new MySql.Data.MySqlClient.MySqlCommand(queryStr, conn);
 

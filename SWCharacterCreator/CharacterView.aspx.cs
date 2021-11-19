@@ -15,6 +15,7 @@ namespace SWCharacterCreator
         String queryStr;
         String userip;
         String attributeEdit;
+        String acc_id;
         String charName, charSpecies, charClass, charLvl, charAlignment, charStr, charDex, charCon, charInt, charWis, charChar;
         List<string> charNames = new List<string>();
         
@@ -30,7 +31,10 @@ namespace SWCharacterCreator
             conn = new MySql.Data.MySqlClient.MySqlConnection(connString);
             conn.Open();
 
-            queryStr = "SELECT charName FROM swccdb.characters";
+            acc_id = (String)Session["acc_id"];
+
+            queryStr = "SELECT charName FROM swccdb.characters " +
+                "WHERE acc_id='" + acc_id + "'";
 
             cmd = new MySql.Data.MySqlClient.MySqlCommand(queryStr, conn);
 
