@@ -19,13 +19,8 @@ namespace SWCharacterCreator
         String charName, charSpecies, charClass, charLvl, charAlignment, charStr, charDex, charCon, charInt, charWis, charChar;
         List<string> charNames = new List<string>();
         
-        protected void Page_Load(object sender, EventArgs e) 
+        protected void loadPage()
         {
-            displayCharacterSelect.Items.Clear();
-            DeleteCharacterSelect.Items.Clear();
-            EditCharSelectList.Items.Clear();
-
-
             String connString = System.Configuration.ConfigurationManager.ConnectionStrings["SWCCStr"].ToString();
             //"server=" + userip + ";User ID=webuser;Password=1234;Database=swccdb;";
             conn = new MySql.Data.MySqlClient.MySqlConnection(connString);
@@ -47,21 +42,26 @@ namespace SWCharacterCreator
 
             if (reader.HasRows)
             {
-                foreach(string charIndex in charNames)
+                foreach (string charIndex in charNames)
                 {
                     displayCharacterSelect.Items.Add(charIndex);
                     DeleteCharacterSelect.Items.Add(charIndex);
                     EditCharSelectList.Items.Add(charIndex);
                 }
+                charNames.Clear();
             }
 
             reader.Close();
-            conn.Close();                       
-
+            conn.Close();
+        }
+        protected void Page_Load(object sender, EventArgs e) 
+        {
+            loadPage();
         }
             
         protected void displayCharacter(object sender, EventArgs e)
         {
+
             String connString = System.Configuration.ConfigurationManager.ConnectionStrings["SWCCStr"].ToString();
             //"server=" + userip + ";User ID=webuser;Password=1234;Database=swccdb;";
             conn = new MySql.Data.MySqlClient.MySqlConnection(connString);
@@ -110,8 +110,17 @@ namespace SWCharacterCreator
 
             }
 
+
+            displayCharacterSelect.Items.Clear();
+            DeleteCharacterSelect.Items.Clear();
+            EditCharSelectList.Items.Clear();
+
+
             reader.Close();
             conn.Close();
+
+            loadPage();
+
         }
 
         protected void deleteCharacter(object sender, EventArgs e)
