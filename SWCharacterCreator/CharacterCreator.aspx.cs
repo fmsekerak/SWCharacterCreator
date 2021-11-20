@@ -49,6 +49,11 @@ namespace SWCharacterCreator
         {
 
         }
+
+        protected void speciesSelect_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

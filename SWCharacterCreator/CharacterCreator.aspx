@@ -7,7 +7,7 @@
     <h4> Character Name: </h4> 
     <asp:TextBox id="nameField" runat="server"/> <br/>
     <h4> Choose a species: </h4>
-    <asp:DropDownList ID="speciesSelect" name="speciesSelect" runat="server">
+    <asp:DropDownList ID="speciesSelect" name="speciesSelect" runat="server" OnSelectedIndexChanged="speciesSelectChange">
         <asp:ListItem Value="1" Text="Bith"></asp:ListItem>
         <asp:ListItem Value="2" Text="Bothan"></asp:ListItem>
         <asp:ListItem Value="3" Text="Cathar"></asp:ListItem>
@@ -33,6 +33,7 @@
         <asp:ListItem Value="23" Text="Sith Pureblood"></asp:ListItem>
         <asp:ListItem Value="24" Text="Togruta"></asp:ListItem>
         <asp:ListItem Value="25" Text="Trandoshan"></asp:ListItem>
+        <asp:ListItem Selected="True" Enabled="true" Value="huh"></asp:ListItem>
     </asp:DropDownList>
 
     <h4> Choose a class: </h4>
