@@ -43,30 +43,9 @@ namespace SWCharacterCreator.Account
             registerUser();
         }
 
-        protected string GetIPAddress()
-        {
-            System.Web.HttpContext context = System.Web.HttpContext.Current;
-            string ipAddress = context.Request.ServerVariables["HTTP_X_FORWARDED_FOR"];
-
-            if (!string.IsNullOrEmpty(ipAddress))
-            {
-                string[] addresses = ipAddress.Split(',');
-                if (addresses.Length != 0)
-                {
-                    return addresses[0];
-                }
-            }
-
-            return context.Request.ServerVariables["REMOTE_ADDR"];
-        }
-
-
         protected void registerUser()
-        {
-            userip = GetIPAddress();            
-
+        {         
             String connString = System.Configuration.ConfigurationManager.ConnectionStrings["SWCCStr"].ToString();
-            //"server=" + userip + ";User ID=webuser;Password=1234;Database=swccdb;";
 
             conn = new MySql.Data.MySqlClient.MySqlConnection(connString);
 
@@ -80,6 +59,9 @@ namespace SWCharacterCreator.Account
             cmd.ExecuteReader();
 
             conn.Close();
+
+            registerBtn.Enabled = false;
+            registerBtn.Text = "Successfully Registered! Please Log In.";
         }
     }
 

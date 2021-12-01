@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
+
 namespace SWCharacterCreator
 {
     public partial class CharacterView : System.Web.UI.Page
@@ -13,8 +14,8 @@ namespace SWCharacterCreator
         MySql.Data.MySqlClient.MySqlCommand cmd;
         MySql.Data.MySqlClient.MySqlDataReader reader;
         String queryStr;
-        String userip;
         String attributeEdit;
+        public String sqlAttribute = "";
         String acc_id;
         String charName, charSpecies, charClass, charLvl, charAlignment, charStr, charDex, charCon, charInt, charWis, charChar;
         List<string> charNames = new List<string>();
@@ -123,7 +124,6 @@ namespace SWCharacterCreator
         protected void deleteCharacter(object sender, EventArgs e)
         {
             String connString = System.Configuration.ConfigurationManager.ConnectionStrings["SWCCStr"].ToString();
-            //"server=" + userip + ";User ID=webuser;Password=1234;Database=swccdb;";
             conn = new MySql.Data.MySqlClient.MySqlConnection(connString);
             conn.Open();
 
@@ -141,48 +141,55 @@ namespace SWCharacterCreator
             loadPage();
         }
 
+        protected void editIndexChanged(object sender, EventArgs e)
+        {
+            editAttribute.Visible = false;
+        }
+
         protected void EditCharacter(object sender, EventArgs e)
         {
-            EditStrengthDrop.Visible = true;
+            
+            editAttribute.Visible = true;
         }
         
         protected void SubmitEditCharacter(object sender, EventArgs e)
         {
             
             String connString = System.Configuration.ConfigurationManager.ConnectionStrings["SWCCStr"].ToString();
-            //"server=" + userip + ";User ID=webuser;Password=1234;Database=swccdb;";
             conn = new MySql.Data.MySqlClient.MySqlConnection(connString);
             conn.Open();
 
-            attributeEdit = EditAttributeList.SelectedValue;
+            attributeEdit = EditAttributeList.SelectedItem.Text;
+            switch (attributeEdit)
+            {
+                case "Strength":
+                    sqlAttribute = "charStr";
+                    break;
+                case "Dexterity":
+                    sqlAttribute = "charDex";
+                    break;
+                case "Constitution":
+                    sqlAttribute = "charCon";
+                    break;
+                case "Intelligence":
+                    sqlAttribute = "charInt";
+                    break;
+                case "Wisdom":
+                    sqlAttribute = "charWis";
+                    break;
+                case "Charisma":
+                    sqlAttribute = "charChar";
+                    break;
+            }
 
             queryStr = "UPDATE swccdb.characters " +
-                       "SET charStr='" + EditStrengthDrop.SelectedItem.Text + "' " +
+                       "SET " + sqlAttribute + "='" + editAttribute.SelectedItem.Text + "' " +
                        "WHERE charName='" + EditCharSelectList.SelectedValue + "'";
 
             cmd = new MySql.Data.MySqlClient.MySqlCommand(queryStr, conn);
 
             cmd.ExecuteReader();
 
-            //reader = cmd.ExecuteReader();
-
-            //while (reader.HasRows && reader.Read())
-            //{
-            //    charName = reader.GetString(reader.GetOrdinal("charName"));
-            //    charSpecies = reader.GetString(reader.GetOrdinal("charSpecies"));
-            //    charClass = reader.GetString(reader.GetOrdinal("charClass"));
-            //    charLvl = reader.GetString(reader.GetOrdinal("charLvl"));
-            //    charAlignment = reader.GetString(reader.GetOrdinal("charAlignment"));
-            //    charStr = reader.GetString(reader.GetOrdinal("charStr"));
-            //    charDex = reader.GetString(reader.GetOrdinal("charDex"));
-            //    charCon = reader.GetString(reader.GetOrdinal("charCon"));
-            //    charInt = reader.GetString(reader.GetOrdinal("charInt"));
-            //    charWis = reader.GetString(reader.GetOrdinal("charWis"));
-            //    charChar = reader.GetString(reader.GetOrdinal("charChar"));
-            //}
-
-
-            //reader.Close();
             conn.Close();
 
 

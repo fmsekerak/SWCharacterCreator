@@ -109,8 +109,8 @@
     </asp:DropDownList>
 
     <br /> <br />
-    <asp:DropDownList ID="EditAttributeList" name="EditAttrSelect" runat="server">
-        <asp:ListItem Value="1"  Text="Name"></asp:ListItem>
+    <asp:DropDownList ID="EditAttributeList" name="EditAttrSelect" runat="server" OnSelectedIndexChanged="editIndexChanged" AutoPostBack="true">
+        <asp:ListItem Value="1" Text="Name"></asp:ListItem>
         <asp:ListItem Value="2" Text="Species"></asp:ListItem>
         <asp:ListItem Value="3" Text="Class"></asp:ListItem>
         <asp:ListItem Value="4" Text="Level"></asp:ListItem>
@@ -127,8 +127,8 @@
     <asp:Button OnClick="EditCharacter" ID="EditCharacterButton" runat="server" Text="Edit">
     </asp:Button>
 
-     <asp:DropDownList ID="EditStrengthDrop" runat="server" Visible="false">
-        <asp:ListItem Value="1"  Text="8"></asp:ListItem>
+     <asp:DropDownList ID="editAttribute" runat="server" Visible="false">
+        <asp:ListItem Value="1" Text="8"></asp:ListItem>
         <asp:ListItem Value="2" Text="10"></asp:ListItem>
         <asp:ListItem Value="3" Text="12"></asp:ListItem>
         <asp:ListItem Value="4" Text="14"></asp:ListItem>
