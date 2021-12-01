@@ -47,7 +47,20 @@ namespace SWCharacterCreator
 
         protected void speciesChanged(object sender, EventArgs e)
         {
-            switch(speciesSelect.SelectedItem.Text)
+            StrengthDrop.ClearSelection();
+            strengthTotal.Text = "-";
+            DexterityDrop.ClearSelection();
+            dexterityTotal.Text = "-";
+            ConstitutionDrop.ClearSelection();
+            constitutionTotal.Text = "-";
+            IntelligenceDrop.ClearSelection();
+            intelligenceTotal.Text = "-";
+            WisdomDrop.ClearSelection();
+            wisdomTotal.Text = "-";
+            CharismaDrop.ClearSelection();
+            charismaTotal.Text = "-";
+
+            switch (speciesSelect.SelectedItem.Text)
             {
                 case "Bith":
                     strengthRacial.Text = "-";
