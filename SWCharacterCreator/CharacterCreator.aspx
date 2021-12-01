@@ -118,9 +118,9 @@
                     Strength
                 </asp:TableCell>
                   <asp:TableCell runat="Server" BorderWidth="2" BorderColor="Sandybrown" HorizontalAlign="Center">
-                      <asp:DropDownList ID="StrengthDrop" runat="server">
+                      <asp:DropDownList ID="StrengthDrop" runat="server" OnSelectedIndexChanged="StrengthChanged" AutoPostBack="true">
                           <asp:ListItem Value="0" Text=""></asp:ListItem>
-                          <asp:ListItem Value="1"  Text="8"></asp:ListItem>
+                          <asp:ListItem Value="1" Text="8"></asp:ListItem>
                           <asp:ListItem Value="2" Text="10"></asp:ListItem>
                           <asp:ListItem Value="3" Text="12"></asp:ListItem>
                           <asp:ListItem Value="4" Text="14"></asp:ListItem>
@@ -129,7 +129,7 @@
                           <asp:ListItem Value="7" Text="20"></asp:ListItem>
                       </asp:DropDownList>
                 </asp:TableCell>
-                <asp:TableCell ID="strengthRacial" runat="Server" BorderWidth="2" BorderColor="Sandybrown" HorizontalAlign="Center" Text="-">
+                <asp:TableCell ID="strengthRacial" runat="Server" BorderWidth="2" BorderColor="Sandybrown" HorizontalAlign="Center" Text="-"> 
                 </asp:TableCell>
                 <asp:TableCell ID="strengthTotal" runat="Server" BorderWidth="2" BorderColor="Sandybrown" HorizontalAlign="Center" Text="-">
                 </asp:TableCell>

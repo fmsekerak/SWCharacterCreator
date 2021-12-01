@@ -293,6 +293,26 @@ namespace SWCharacterCreator
             }
 
         }
+
+        protected void StrengthChanged(object sender, EventArgs e)
+        {
+            if(strengthRacial.Text != "-")
+            {
+                int tempRace = Convert.ToInt32(strengthRacial.Text);
+                int tempstr = Convert.ToInt32(StrengthDrop.SelectedItem.Text);
+                int num = tempRace + tempstr;
+                string total = num.ToString();
+                strengthTotal.Text = total;
+            }
+            else 
+            {
+                strengthTotal.Text = StrengthDrop.SelectedItem.Text;
+            }
+
+
+
+        }
+
     }
 }
 
