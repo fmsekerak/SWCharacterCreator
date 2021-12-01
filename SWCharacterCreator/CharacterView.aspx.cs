@@ -23,7 +23,6 @@ namespace SWCharacterCreator
         protected void loadPage()
         {
             String connString = System.Configuration.ConfigurationManager.ConnectionStrings["SWCCStr"].ToString();
-            //"server=" + userip + ";User ID=webuser;Password=1234;Database=swccdb;";
             conn = new MySql.Data.MySqlClient.MySqlConnection(connString);
             conn.Open();
 
@@ -64,7 +63,6 @@ namespace SWCharacterCreator
         {
 
             String connString = System.Configuration.ConfigurationManager.ConnectionStrings["SWCCStr"].ToString();
-            //"server=" + userip + ";User ID=webuser;Password=1234;Database=swccdb;";
             conn = new MySql.Data.MySqlClient.MySqlConnection(connString);
             conn.Open();
 
@@ -187,9 +185,7 @@ namespace SWCharacterCreator
                        "WHERE charName='" + EditCharSelectList.SelectedValue + "'";
 
             cmd = new MySql.Data.MySqlClient.MySqlCommand(queryStr, conn);
-
             cmd.ExecuteReader();
-
             conn.Close();
 
 

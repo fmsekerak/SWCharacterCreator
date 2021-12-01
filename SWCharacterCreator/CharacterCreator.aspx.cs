@@ -23,9 +23,6 @@ namespace SWCharacterCreator
         {
             
             String connString = System.Configuration.ConfigurationManager.ConnectionStrings["SWCCStr"].ToString();
-
-            //"server=" + userip + ";User ID=webuser;Password=1234;Database=swccdb;";
-
             conn = new MySql.Data.MySqlClient.MySqlConnection(connString);
             conn.Open();
 
@@ -37,11 +34,8 @@ namespace SWCharacterCreator
             intelligenceTotal.Text + "','" + wisdomTotal.Text + "','" + charismaTotal.Text + "','" + backgroundSelect.SelectedItem.Text + "','" + acc_id + "')";
 
             cmd = new MySql.Data.MySqlClient.MySqlCommand(queryStr, conn);
-
-            cmd.ExecuteReader();
-            
-            conn.Close();
-            Console.WriteLine("Character has been created.");       
+            cmd.ExecuteReader();            
+            conn.Close();   
             
         }
 
