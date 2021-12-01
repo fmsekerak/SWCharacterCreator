@@ -96,6 +96,24 @@ namespace SWCharacterCreator
         protected global::System.Web.UI.WebControls.DropDownList StrengthDrop;
 
         /// <summary>
+        /// strengthRacial control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TableCell strengthRacial;
+
+        /// <summary>
+        /// strengthTotal control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TableCell strengthTotal;
+
+        /// <summary>
         /// TableRow2 control.
         /// </summary>
         /// <remarks>
@@ -112,6 +130,24 @@ namespace SWCharacterCreator
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList DexterityDrop;
+
+        /// <summary>
+        /// dexterityRacial control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TableCell dexterityRacial;
+
+        /// <summary>
+        /// dexterityTotal control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TableCell dexterityTotal;
 
         /// <summary>
         /// TableRow3 control.
@@ -132,6 +168,24 @@ namespace SWCharacterCreator
         protected global::System.Web.UI.WebControls.DropDownList ConstitutionDrop;
 
         /// <summary>
+        /// constitutionRacial control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TableCell constitutionRacial;
+
+        /// <summary>
+        /// constitutionTotal control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TableCell constitutionTotal;
+
+        /// <summary>
         /// TableRow4 control.
         /// </summary>
         /// <remarks>
@@ -148,6 +202,24 @@ namespace SWCharacterCreator
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList IntelligenceDrop;
+
+        /// <summary>
+        /// intelligenceRacial control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TableCell intelligenceRacial;
+
+        /// <summary>
+        /// intelligenceTotal control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TableCell intelligenceTotal;
 
         /// <summary>
         /// TableRow5 control.
@@ -168,6 +240,24 @@ namespace SWCharacterCreator
         protected global::System.Web.UI.WebControls.DropDownList WisdomDrop;
 
         /// <summary>
+        /// wisdomRacial control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TableCell wisdomRacial;
+
+        /// <summary>
+        /// wisdomTotal control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TableCell wisdomTotal;
+
+        /// <summary>
         /// TableRow7 control.
         /// </summary>
         /// <remarks>
@@ -186,13 +276,31 @@ namespace SWCharacterCreator
         protected global::System.Web.UI.WebControls.DropDownList CharismaDrop;
 
         /// <summary>
-        /// backgroundselect control.
+        /// charismaRacial control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList backgroundselect;
+        protected global::System.Web.UI.WebControls.TableCell charismaRacial;
+
+        /// <summary>
+        /// charismaTotal control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TableCell charismaTotal;
+
+        /// <summary>
+        /// backgroundSelect control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList backgroundSelect;
 
         /// <summary>
         /// submitButton control.

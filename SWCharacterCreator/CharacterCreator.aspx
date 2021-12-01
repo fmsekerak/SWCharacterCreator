@@ -7,7 +7,8 @@
     <h4> Character Name: </h4> 
     <asp:TextBox id="nameField" runat="server"/> <br/>
     <h4> Choose a species: </h4>
-    <asp:DropDownList ID="speciesSelect" name="speciesSelect" runat="server" OnSelectedIndexChanged="speciesSelectChange">
+    <asp:DropDownList ID="speciesSelect" name="speciesSelect" runat="server" OnSelectedIndexChanged="speciesChanged" AutoPostBack="true">
+        <asp:ListItem Value="0" Text=""></asp:ListItem>
         <asp:ListItem Value="1" Text="Bith"></asp:ListItem>
         <asp:ListItem Value="2" Text="Bothan"></asp:ListItem>
         <asp:ListItem Value="3" Text="Cathar"></asp:ListItem>
@@ -33,11 +34,17 @@
         <asp:ListItem Value="23" Text="Sith Pureblood"></asp:ListItem>
         <asp:ListItem Value="24" Text="Togruta"></asp:ListItem>
         <asp:ListItem Value="25" Text="Trandoshan"></asp:ListItem>
-        <asp:ListItem Selected="True" Enabled="true" Value="huh"></asp:ListItem>
+        <asp:ListItem Value="26" Text="Tusken"></asp:ListItem>
+        <asp:ListItem Value="27" Text="Twi'lek"></asp:ListItem>
+        <asp:ListItem Value="28" Text="Weequay"></asp:ListItem>
+        <asp:ListItem Value="29" Text="Wookiee"></asp:ListItem>
+        <asp:ListItem Value="30" Text="Zabrak"></asp:ListItem>
+
     </asp:DropDownList>
 
     <h4> Choose a class: </h4>
     <asp:DropDownList ID="classSelect" name="classSelect" runat="server">
+        <asp:ListItem Value="0" Text=""></asp:ListItem>
         <asp:ListItem Value="1" Text="Berserker"></asp:ListItem>
         <asp:ListItem Value="2" Text="Consular"></asp:ListItem>
         <asp:ListItem Value="3" Text="Engineer"></asp:ListItem>
@@ -52,6 +59,7 @@
 
     <h4> Choose a level: </h4>
     <asp:DropDownList ID="levelSelect" name="levelSelect" runat="server">
+        <asp:ListItem Value="0" Text=""></asp:ListItem>
         <asp:ListItem Value="1" Text="1"></asp:ListItem>
         <asp:ListItem Value="2" Text="2"></asp:ListItem>
         <asp:ListItem Value="3" Text="3"></asp:ListItem>
@@ -76,6 +84,7 @@
 
     <h4> Choose an alignment: </h4>
     <asp:DropDownList ID="alignmentSelect" name="alignmentSelect" runat="server">
+        <asp:ListItem Value="0" Text=""></asp:ListItem>
         <asp:ListItem Value="1" Text="Lawful Light"></asp:ListItem>
         <asp:ListItem Value="2" Text="Lawful Balanced"></asp:ListItem>
         <asp:ListItem Value="3" Text="Lawful Dark"></asp:ListItem>
@@ -110,6 +119,7 @@
                 </asp:TableCell>
                   <asp:TableCell runat="Server" BorderWidth="2" BorderColor="Sandybrown" HorizontalAlign="Center">
                       <asp:DropDownList ID="StrengthDrop" runat="server">
+                          <asp:ListItem Value="0" Text=""></asp:ListItem>
                           <asp:ListItem Value="1"  Text="8"></asp:ListItem>
                           <asp:ListItem Value="2" Text="10"></asp:ListItem>
                           <asp:ListItem Value="3" Text="12"></asp:ListItem>
@@ -119,11 +129,9 @@
                           <asp:ListItem Value="7" Text="20"></asp:ListItem>
                       </asp:DropDownList>
                 </asp:TableCell>
-                <asp:TableCell runat="Server" BorderWidth="2" BorderColor="Sandybrown" HorizontalAlign="Center">
-                    -
+                <asp:TableCell ID="strengthRacial" runat="Server" BorderWidth="2" BorderColor="Sandybrown" HorizontalAlign="Center" Text="-">
                 </asp:TableCell>
-                <asp:TableCell runat="Server" BorderWidth="2" BorderColor="Sandybrown" HorizontalAlign="Center">
-                    -
+                <asp:TableCell ID="strengthTotal" runat="Server" BorderWidth="2" BorderColor="Sandybrown" HorizontalAlign="Center" Text="-">
                 </asp:TableCell>
            </asp:TableRow>
 
@@ -133,6 +141,7 @@
                 </asp:TableCell>
              <asp:TableCell runat="Server" BorderWidth="2" BorderColor="Sandybrown" HorizontalAlign="Center">
                     <asp:DropDownList ID="DexterityDrop" runat="server">
+                        <asp:ListItem Value="0" Text=""></asp:ListItem>
                        <asp:ListItem Value="1"  Text="8"></asp:ListItem>
                           <asp:ListItem Value="2" Text="10"></asp:ListItem>
                           <asp:ListItem Value="3" Text="12"></asp:ListItem>
@@ -142,11 +151,9 @@
                           <asp:ListItem Value="7" Text="20"></asp:ListItem>
                       </asp:DropDownList>
                 </asp:TableCell>
-                <asp:TableCell runat="Server" BorderWidth="2" BorderColor="Sandybrown" HorizontalAlign="Center">
-                    -
+                <asp:TableCell ID="dexterityRacial" runat="Server" BorderWidth="2" BorderColor="Sandybrown" HorizontalAlign="Center" Text="-">
                 </asp:TableCell>
-                <asp:TableCell runat="Server" BorderWidth="2" BorderColor="Sandybrown" HorizontalAlign="Center">
-                    -
+                <asp:TableCell ID="dexterityTotal" runat="Server" BorderWidth="2" BorderColor="Sandybrown" HorizontalAlign="Center" Text="-">
                 </asp:TableCell>
         </asp:TableRow>
 
@@ -156,6 +163,7 @@
                 </asp:TableCell>
               <asp:TableCell runat="Server" BorderWidth="2" BorderColor="Sandybrown" HorizontalAlign="Center">
                     <asp:DropDownList ID="ConstitutionDrop" runat="server">
+                        <asp:ListItem Value="0" Text=""></asp:ListItem>
                           <asp:ListItem Value="1"  Text="8"></asp:ListItem>
                           <asp:ListItem Value="2" Text="10"></asp:ListItem>
                           <asp:ListItem Value="3" Text="12"></asp:ListItem>
@@ -165,11 +173,9 @@
                           <asp:ListItem Value="7" Text="20"></asp:ListItem>
                       </asp:DropDownList>
                 </asp:TableCell>
-                <asp:TableCell runat="Server" BorderWidth="2" BorderColor="Sandybrown" HorizontalAlign="Center">
-                    -
+                <asp:TableCell ID="constitutionRacial" runat="Server" BorderWidth="2" BorderColor="Sandybrown" HorizontalAlign="Center" Text="-">
                 </asp:TableCell>
-                <asp:TableCell runat="Server" BorderWidth="2" BorderColor="Sandybrown" HorizontalAlign="Center">
-                    -
+                <asp:TableCell ID="constitutionTotal" runat="Server" BorderWidth="2" BorderColor="Sandybrown" HorizontalAlign="Center" Text="-">
                 </asp:TableCell>
         </asp:TableRow>
 
@@ -179,6 +185,7 @@
                 </asp:TableCell>
               <asp:TableCell runat="Server" BorderWidth="2" BorderColor="Sandybrown" HorizontalAlign="Center">
                     <asp:DropDownList ID="IntelligenceDrop" runat="server">
+                        <asp:ListItem Value="0" Text=""></asp:ListItem>
                           <asp:ListItem Value="1"  Text="8"></asp:ListItem>
                           <asp:ListItem Value="2" Text="10"></asp:ListItem>
                           <asp:ListItem Value="3" Text="12"></asp:ListItem>
@@ -188,11 +195,9 @@
                           <asp:ListItem Value="7" Text="20"></asp:ListItem>
                       </asp:DropDownList>
                 </asp:TableCell>
-                <asp:TableCell runat="Server" BorderWidth="2" BorderColor="Sandybrown" HorizontalAlign="Center">
-                    -
+                <asp:TableCell ID="intelligenceRacial" runat="Server" BorderWidth="2" BorderColor="Sandybrown" HorizontalAlign="Center" Text="-">
                 </asp:TableCell>
-                <asp:TableCell runat="Server" BorderWidth="2" BorderColor="Sandybrown" HorizontalAlign="Center">
-                    -
+                <asp:TableCell ID="intelligenceTotal" runat="Server" BorderWidth="2" BorderColor="Sandybrown" HorizontalAlign="Center" Text="-">
                 </asp:TableCell>
         </asp:TableRow>
 
@@ -202,6 +207,7 @@
                 </asp:TableCell>
               <asp:TableCell runat="Server" BorderWidth="2" BorderColor="Sandybrown" HorizontalAlign="Center">
                     <asp:DropDownList ID="WisdomDrop" runat="server">
+                        <asp:ListItem Value="0" Text=""></asp:ListItem>
                           <asp:ListItem Value="1"  Text="8"></asp:ListItem>
                           <asp:ListItem Value="2" Text="10"></asp:ListItem>
                           <asp:ListItem Value="3" Text="12"></asp:ListItem>
@@ -211,11 +217,9 @@
                           <asp:ListItem Value="7" Text="20"></asp:ListItem>
                       </asp:DropDownList>
                 </asp:TableCell>
-                <asp:TableCell runat="Server" BorderWidth="2" BorderColor="Sandybrown" HorizontalAlign="Center">
-                    -
+                <asp:TableCell ID="wisdomRacial" runat="Server" BorderWidth="2" BorderColor="Sandybrown" HorizontalAlign="Center" Text="-">
                 </asp:TableCell>
-                <asp:TableCell runat="Server" BorderWidth="2" BorderColor="Sandybrown" HorizontalAlign="Center">
-                    -
+                <asp:TableCell ID="wisdomTotal" runat="Server" BorderWidth="2" BorderColor="Sandybrown" HorizontalAlign="Center" Text="-">
                 </asp:TableCell>
         </asp:TableRow>
 
@@ -225,6 +229,7 @@
                 </asp:TableCell>
               <asp:TableCell runat="Server" BorderWidth="2" BorderColor="Sandybrown" HorizontalAlign="Center">
                     <asp:DropDownList ID="CharismaDrop" runat="server">
+                        <asp:ListItem Value="0" Text=""></asp:ListItem>
                           <asp:ListItem Value="1"  Text="8"></asp:ListItem>
                           <asp:ListItem Value="2" Text="10"></asp:ListItem>
                           <asp:ListItem Value="3" Text="12"></asp:ListItem>
@@ -234,18 +239,17 @@
                           <asp:ListItem Value="7" Text="20"></asp:ListItem>
                       </asp:DropDownList>
                 </asp:TableCell>
-                <asp:TableCell runat="Server" BorderWidth="2" BorderColor="Sandybrown" HorizontalAlign="Center">
-                    -
+                <asp:TableCell ID="charismaRacial" runat="Server" BorderWidth="2" BorderColor="Sandybrown" HorizontalAlign="Center" Text="-">
                 </asp:TableCell>
-                <asp:TableCell runat="Server" BorderWidth="2" BorderColor="Sandybrown" HorizontalAlign="Center">
-                    -
+                <asp:TableCell ID="charismaTotal" runat="Server" BorderWidth="2" BorderColor="Sandybrown" HorizontalAlign="Center" Text="-">
                 </asp:TableCell>
         </asp:TableRow>
 
     </asp:Table>
 
-        <h4> Choose a backgroud: </h4>
-        <asp:DropDownList ID="backgroundselect" name="backgroundSelect" runat="server">
+        <h4> Choose a background: </h4>
+        <asp:DropDownList ID="backgroundSelect" name="backgroundSelect" runat="server">
+        <asp:ListItem Value="0" Text=""></asp:ListItem>
         <asp:ListItem Value="1" Text="Agent"></asp:ListItem>
         <asp:ListItem Value="2" Text="Bounty Hunter"></asp:ListItem>
         <asp:ListItem Value="3" Text="Criminal"></asp:ListItem>
@@ -257,7 +261,7 @@
         <asp:ListItem Value="9" Text="Mandalorian"></asp:ListItem>
         <asp:ListItem Value="10" Text="Mercenary"></asp:ListItem>
         <asp:ListItem Value="11" Text="Noble"></asp:ListItem>
-        <asp:ListItem Value="12" Text="Nomand"></asp:ListItem>
+        <asp:ListItem Value="12" Text="Nomad"></asp:ListItem>
         <asp:ListItem Value="13" Text="Outlaw"></asp:ListItem>
         <asp:ListItem Value="14" Text="Pirate"></asp:ListItem>
         <asp:ListItem Value="15" Text="Scientist"></asp:ListItem>

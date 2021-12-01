@@ -16,7 +16,7 @@ namespace SWCharacterCreator
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
+        
         }
 
         protected void submitClick(object sender, EventArgs e)
@@ -45,13 +45,252 @@ namespace SWCharacterCreator
             
         }
 
-        protected void submitButton_Command(object sender, CommandEventArgs e)
+        protected void speciesChanged(object sender, EventArgs e)
         {
+            switch(speciesSelect.SelectedItem.Text)
+            {
+                case "Bith":
+                    strengthRacial.Text = "-";
+                    dexterityRacial.Text = "1";
+                    constitutionRacial.Text = "-";
+                    intelligenceRacial.Text = "2";
+                    wisdomRacial.Text = "-";
+                    charismaRacial.Text = "-";
+                    break;
+                case "Bothan":
+                    strengthRacial.Text = "-";
+                    dexterityRacial.Text = "1";
+                    constitutionRacial.Text = "-";
+                    intelligenceRacial.Text = "2";
+                    wisdomRacial.Text = "-";
+                    charismaRacial.Text = "-";
+                    break;
+                case "Cathar":
+                    strengthRacial.Text = "-";
+                    dexterityRacial.Text = "2";
+                    constitutionRacial.Text = "-";
+                    intelligenceRacial.Text = "-";
+                    wisdomRacial.Text = "-";
+                    charismaRacial.Text = "1";
+                    break;
+                case "Cerean":
+                    strengthRacial.Text = "-";
+                    dexterityRacial.Text = "-";
+                    constitutionRacial.Text = "-";
+                    intelligenceRacial.Text = "2";
+                    wisdomRacial.Text = "1";
+                    charismaRacial.Text = "-";
+                    break;
+                case "Chiss":
+                    strengthRacial.Text = "-";
+                    dexterityRacial.Text = "-";
+                    constitutionRacial.Text = "-";
+                    intelligenceRacial.Text = "2";
+                    wisdomRacial.Text = "-";
+                    charismaRacial.Text = "1";
+                    break;
+                case "Devaronian":
+                    strengthRacial.Text = "-";
+                    dexterityRacial.Text = "-";
+                    constitutionRacial.Text = "2";
+                    intelligenceRacial.Text = "-";
+                    wisdomRacial.Text = "-";
+                    charismaRacial.Text = "1";
+                    break;
+                case "Droid, Class I":
+                    strengthRacial.Text = "-";
+                    dexterityRacial.Text = "-";
+                    constitutionRacial.Text = "-";
+                    intelligenceRacial.Text = "2";
+                    wisdomRacial.Text = "1";
+                    charismaRacial.Text = "-";
+                    break;
+                case "Droid, Class II":
+                    strengthRacial.Text = "-";
+                    dexterityRacial.Text = "1";
+                    constitutionRacial.Text = "-";
+                    intelligenceRacial.Text = "2";
+                    wisdomRacial.Text = "-";
+                    charismaRacial.Text = "-";
+                    break;
+                case "Droid, Class III":
+                    strengthRacial.Text = "-";
+                    dexterityRacial.Text = "-";
+                    constitutionRacial.Text = "-";
+                    intelligenceRacial.Text = "1";
+                    wisdomRacial.Text = "-";
+                    charismaRacial.Text = "2";
+                    break;
+                case "Droid, Class IV":
+                    strengthRacial.Text = "1";
+                    dexterityRacial.Text = "-";
+                    constitutionRacial.Text = "2";
+                    intelligenceRacial.Text = "-";
+                    wisdomRacial.Text = "-";
+                    charismaRacial.Text = "-";
+                    break;
+                case "Droid, Class V":
+                    strengthRacial.Text = "2";
+                    dexterityRacial.Text = "1";
+                    constitutionRacial.Text = "-";
+                    intelligenceRacial.Text = "-";
+                    wisdomRacial.Text = "-";
+                    charismaRacial.Text = "-";
+                    break;
+                case "Duros":
+                    strengthRacial.Text = "-";
+                    dexterityRacial.Text = "2";
+                    constitutionRacial.Text = "-";
+                    intelligenceRacial.Text = "1";
+                    wisdomRacial.Text = "-";
+                    charismaRacial.Text = "-";
+                    break;
+                case "Ewok":
+                    strengthRacial.Text = "-";
+                    dexterityRacial.Text = "2";
+                    constitutionRacial.Text = "1";
+                    intelligenceRacial.Text = "-";
+                    wisdomRacial.Text = "-";
+                    charismaRacial.Text = "-";
+                    break;
+                case "Gamorrean":
+                    strengthRacial.Text = "2";
+                    dexterityRacial.Text = "-";
+                    constitutionRacial.Text = "1";
+                    intelligenceRacial.Text = "-";
+                    wisdomRacial.Text = "-";
+                    charismaRacial.Text = "-";
+                    break;
+                case "Gungan":
+                    strengthRacial.Text = "1";
+                    dexterityRacial.Text = "2";
+                    constitutionRacial.Text = "-";
+                    intelligenceRacial.Text = "-";
+                    wisdomRacial.Text = "-";
+                    charismaRacial.Text = "-";
+                    break;
+                case "Human":
+                    strengthRacial.Text = "2";
+                    dexterityRacial.Text = "-";
+                    constitutionRacial.Text = "1";
+                    intelligenceRacial.Text = "-";
+                    wisdomRacial.Text = "-";
+                    charismaRacial.Text = "-";
+                    break;
+                case "Ithorian":
+                    strengthRacial.Text = "-";
+                    dexterityRacial.Text = "-";
+                    constitutionRacial.Text = "-";
+                    intelligenceRacial.Text = "-";
+                    wisdomRacial.Text = "1";
+                    charismaRacial.Text = "2";
+                    break;
+                case "Jawa":
+                    strengthRacial.Text = "-";
+                    dexterityRacial.Text = "2";
+                    constitutionRacial.Text = "-";
+                    intelligenceRacial.Text = "1";
+                    wisdomRacial.Text = "-";
+                    charismaRacial.Text = "-";
+                    break;
+                case "Kel Dor":
+                    strengthRacial.Text = "-";
+                    dexterityRacial.Text = "1";
+                    constitutionRacial.Text = "-";
+                    intelligenceRacial.Text = "-";
+                    wisdomRacial.Text = "2";
+                    charismaRacial.Text = "-";
+                    break;
+                case "Mon Calamari":
+                    strengthRacial.Text = "-";
+                    dexterityRacial.Text = "-";
+                    constitutionRacial.Text = "-";
+                    intelligenceRacial.Text = "1";
+                    wisdomRacial.Text = "-";
+                    charismaRacial.Text = "2";
+                    break;
+                case "Nautolan":
+                    strengthRacial.Text = "-";
+                    dexterityRacial.Text = "2";
+                    constitutionRacial.Text = "-";
+                    intelligenceRacial.Text = "-";
+                    wisdomRacial.Text = "1";
+                    charismaRacial.Text = "-";
+                    break;
+                case "Rodian":
+                    strengthRacial.Text = "-";
+                    dexterityRacial.Text = "2";
+                    constitutionRacial.Text = "1";
+                    intelligenceRacial.Text = "-";
+                    wisdomRacial.Text = "-";
+                    charismaRacial.Text = "-";
+                    break;
+                case "Sith Pureblood":
+                    strengthRacial.Text = "1";
+                    dexterityRacial.Text = "-";
+                    constitutionRacial.Text = "-";
+                    intelligenceRacial.Text = "-";
+                    wisdomRacial.Text = "-";
+                    charismaRacial.Text = "2";
+                    break;
+                case "Togruta":
+                    strengthRacial.Text = "1";
+                    dexterityRacial.Text = "-";
+                    constitutionRacial.Text = "-";
+                    intelligenceRacial.Text = "-";
+                    wisdomRacial.Text = "2";
+                    charismaRacial.Text = "-";
+                    break;
+                case "Trandoshan":
+                    strengthRacial.Text = "2";
+                    dexterityRacial.Text = "-";
+                    constitutionRacial.Text = "-";
+                    intelligenceRacial.Text = "-";
+                    wisdomRacial.Text = "1";
+                    charismaRacial.Text = "-";
+                    break;
+                case "Tusken":
+                    strengthRacial.Text = "1";
+                    dexterityRacial.Text = "-";
+                    constitutionRacial.Text = "2";
+                    intelligenceRacial.Text = "-";
+                    wisdomRacial.Text = "-";
+                    charismaRacial.Text = "-";
+                    break;
+                case "Twi'lek":
+                    strengthRacial.Text = "-";
+                    dexterityRacial.Text = "1";
+                    constitutionRacial.Text = "-";
+                    intelligenceRacial.Text = "-";
+                    wisdomRacial.Text = "-";
+                    charismaRacial.Text = "2";
+                    break;
+                case "Weequay":
+                    strengthRacial.Text = "-";
+                    dexterityRacial.Text = "-";
+                    constitutionRacial.Text = "1";
+                    intelligenceRacial.Text = "-";
+                    wisdomRacial.Text = "-";
+                    charismaRacial.Text = "2";
+                    break;
+                case "Wookiee":
+                    strengthRacial.Text = "2";
+                    dexterityRacial.Text = "-";
+                    constitutionRacial.Text = "1";
+                    intelligenceRacial.Text = "-";
+                    wisdomRacial.Text = "-";
+                    charismaRacial.Text = "-";
+                    break;
+                case "Zabrak":
+                    strengthRacial.Text = "1";
+                    dexterityRacial.Text = "-";
+                    constitutionRacial.Text = "2";
+                    intelligenceRacial.Text = "-";
+                    wisdomRacial.Text = "-";
+                    charismaRacial.Text = "-";
+                    break;
 
-        }
-
-        protected void speciesSelect_SelectedIndexChanged(object sender, EventArgs e)
-        {
+            }
 
         }
     }
