@@ -31,10 +31,10 @@ namespace SWCharacterCreator
 
             acc_id = (String)Session["acc_id"];
 
-            queryStr = "INSERT INTO swccdb.characters(charName, charSpecies, charClass, charLvl, charAlignment, charStr, charDex, charCon, charInt, charWis, charChar, acc_id)" +
+            queryStr = "INSERT INTO swccdb.characters(charName, charSpecies, charClass, charLvl, charAlignment, charStr, charDex, charCon, charInt, charWis, charChar, background, acc_id)" +
             "VALUES('" + nameField.Text + "','" + speciesSelect.SelectedItem.Text + "','" + classSelect.SelectedItem.Text + "','" + levelSelect.SelectedItem.Text + "','" + alignmentSelect.SelectedItem.Text + 
-            "','" + StrengthDrop.SelectedItem.Text + "','" + DexterityDrop.SelectedItem.Text + "','" + ConstitutionDrop.SelectedItem.Text + "','" + IntelligenceDrop.SelectedItem.Text + 
-            "','" + WisdomDrop.SelectedItem.Text + "','" + CharismaDrop.SelectedItem.Text + "','" + acc_id + "')";
+            "','" + strengthTotal.Text + "','" + dexterityTotal.Text + "','" + constitutionTotal.Text + "','" + 
+            intelligenceTotal.Text + "','" + wisdomTotal.Text + "','" + charismaTotal.Text + "','" + backgroundSelect.SelectedItem.Text + "','" + acc_id + "')";
 
             cmd = new MySql.Data.MySqlClient.MySqlCommand(queryStr, conn);
 
