@@ -46,18 +46,14 @@ namespace SWCharacterCreator.Account
         protected void registerUser()
         {         
             String connString = System.Configuration.ConfigurationManager.ConnectionStrings["SWCCStr"].ToString();
-
             conn = new MySql.Data.MySqlClient.MySqlConnection(connString);
-
             conn.Open();
 
             queryStr = "INSERT INTO swccdb.accounts(email, pw)" + 
                 "VALUES('" + Email.Text + "','" + Password.Text + "')";
 
             cmd = new MySql.Data.MySqlClient.MySqlCommand(queryStr, conn);
-
             cmd.ExecuteReader();
-
             conn.Close();
 
             registerBtn.Enabled = false;

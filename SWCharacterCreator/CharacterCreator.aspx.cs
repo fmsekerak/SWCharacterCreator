@@ -23,9 +23,6 @@ namespace SWCharacterCreator
         {
             
             String connString = System.Configuration.ConfigurationManager.ConnectionStrings["SWCCStr"].ToString();
-
-            //"server=" + userip + ";User ID=webuser;Password=1234;Database=swccdb;";
-
             conn = new MySql.Data.MySqlClient.MySqlConnection(connString);
             conn.Open();
 
@@ -37,12 +34,36 @@ namespace SWCharacterCreator
             intelligenceTotal.Text + "','" + wisdomTotal.Text + "','" + charismaTotal.Text + "','" + backgroundSelect.SelectedItem.Text + "','" + acc_id + "')";
 
             cmd = new MySql.Data.MySqlClient.MySqlCommand(queryStr, conn);
-
-            cmd.ExecuteReader();
-            
+            cmd.ExecuteReader();            
             conn.Close();
-            Console.WriteLine("Character has been created.");       
-            
+
+            submitConfirmation.Text = "Character " + nameField.Text +" Created!";
+
+            nameField.Text = "";
+            speciesSelect.ClearSelection();
+            classSelect.ClearSelection();
+            levelSelect.ClearSelection();
+            alignmentSelect.ClearSelection();
+            StrengthDrop.ClearSelection();
+            strengthTotal.Text = "-";
+            DexterityDrop.ClearSelection();
+            dexterityTotal.Text = "-";
+            ConstitutionDrop.ClearSelection();
+            constitutionTotal.Text = "-";
+            IntelligenceDrop.ClearSelection();
+            intelligenceTotal.Text = "-";
+            WisdomDrop.ClearSelection();
+            wisdomTotal.Text = "-";
+            CharismaDrop.ClearSelection();
+            charismaTotal.Text = "-";
+            strengthRacial.Text = "-";
+            dexterityRacial.Text = "-";
+            constitutionRacial.Text = "-";
+            intelligenceRacial.Text = "-";
+            wisdomRacial.Text = "-";
+            charismaRacial.Text = "-";
+            backgroundSelect.ClearSelection();
+
         }
 
         protected void speciesChanged(object sender, EventArgs e)

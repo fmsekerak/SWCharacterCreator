@@ -272,11 +272,13 @@
         <asp:ListItem Value="20" Text="Spacer"></asp:ListItem>
         </asp:DropDownList>
 
-        <br /> <br />
+        <br/>
+        <br/>
 
-    <asp:Button OnClick="submitClick" runat="server" ID="submitButton" Text="Submit">
+    <asp:Button OnClick="submitClick" runat="server" ID="submitButton" Text="Create Character">
     </asp:Button>
     
+        <asp:Label ID="submitConfirmation" Text="" runat="server"></asp:Label>
 </asp:Content>
 
 

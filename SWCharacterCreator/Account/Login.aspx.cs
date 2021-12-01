@@ -43,18 +43,13 @@ namespace SWCharacterCreator.Account
             if (IsValid)
             {
                 String connString = System.Configuration.ConfigurationManager.ConnectionStrings["SWCCStr"].ToString();
-                    
-                //"server=" + userip + ";User ID=webuser;Password=1234;Database=swccdb;";
-                
                 conn = new MySql.Data.MySqlClient.MySqlConnection(connString);
-
                 conn.Open();
 
                 queryStr = "SELECT * FROM swccdb.accounts " +
                     "WHERE email='" + Email.Text + "' AND pw='" + Password.Text + "'";
 
                 cmd = new MySql.Data.MySqlClient.MySqlCommand(queryStr, conn);
-
                 reader = cmd.ExecuteReader();
                 emailStr = "";
                 acc_id = "";
