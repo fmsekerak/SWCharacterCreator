@@ -140,7 +140,7 @@
                     Dexterity
                 </asp:TableCell>
              <asp:TableCell runat="Server" BorderWidth="2" BorderColor="Sandybrown" HorizontalAlign="Center">
-                    <asp:DropDownList ID="DexterityDrop" runat="server">
+                    <asp:DropDownList ID="DexterityDrop" runat="server" OnSelectedIndexChanged="DexterityChanged" AutoPostBack="true">
                         <asp:ListItem Value="0" Text=""></asp:ListItem>
                        <asp:ListItem Value="1"  Text="8"></asp:ListItem>
                           <asp:ListItem Value="2" Text="10"></asp:ListItem>
@@ -162,7 +162,7 @@
                     Constitution
                 </asp:TableCell>
               <asp:TableCell runat="Server" BorderWidth="2" BorderColor="Sandybrown" HorizontalAlign="Center">
-                    <asp:DropDownList ID="ConstitutionDrop" runat="server">
+                    <asp:DropDownList ID="ConstitutionDrop" runat="server" OnSelectedIndexChanged="ConstitutionChanged" AutoPostBack="true">
                         <asp:ListItem Value="0" Text=""></asp:ListItem>
                           <asp:ListItem Value="1"  Text="8"></asp:ListItem>
                           <asp:ListItem Value="2" Text="10"></asp:ListItem>
@@ -184,7 +184,7 @@
                     Intelligence
                 </asp:TableCell>
               <asp:TableCell runat="Server" BorderWidth="2" BorderColor="Sandybrown" HorizontalAlign="Center">
-                    <asp:DropDownList ID="IntelligenceDrop" runat="server">
+                    <asp:DropDownList ID="IntelligenceDrop" runat="server" OnSelectedIndexChanged="IntelligenceChanged" AutoPostBack="true">
                         <asp:ListItem Value="0" Text=""></asp:ListItem>
                           <asp:ListItem Value="1"  Text="8"></asp:ListItem>
                           <asp:ListItem Value="2" Text="10"></asp:ListItem>
@@ -206,7 +206,7 @@
                     Wisdom
                 </asp:TableCell>
               <asp:TableCell runat="Server" BorderWidth="2" BorderColor="Sandybrown" HorizontalAlign="Center">
-                    <asp:DropDownList ID="WisdomDrop" runat="server">
+                    <asp:DropDownList ID="WisdomDrop" runat="server" OnSelectedIndexChanged="WisdomChanged" AutoPostBack="true">
                         <asp:ListItem Value="0" Text=""></asp:ListItem>
                           <asp:ListItem Value="1"  Text="8"></asp:ListItem>
                           <asp:ListItem Value="2" Text="10"></asp:ListItem>
@@ -228,7 +228,7 @@
                     Charisma
                 </asp:TableCell>
               <asp:TableCell runat="Server" BorderWidth="2" BorderColor="Sandybrown" HorizontalAlign="Center">
-                    <asp:DropDownList ID="CharismaDrop" runat="server">
+                    <asp:DropDownList ID="CharismaDrop" runat="server" OnSelectedIndexChanged="CharismaChanged" AutoPostBack="true">
                         <asp:ListItem Value="0" Text=""></asp:ListItem>
                           <asp:ListItem Value="1"  Text="8"></asp:ListItem>
                           <asp:ListItem Value="2" Text="10"></asp:ListItem>

@@ -308,11 +308,88 @@ namespace SWCharacterCreator
             {
                 strengthTotal.Text = StrengthDrop.SelectedItem.Text;
             }
+        }
 
-
+        protected void DexterityChanged(object sender, EventArgs e)
+        {
+            if (dexterityRacial.Text != "-")
+            {
+                int tempRace = Convert.ToInt32(dexterityRacial.Text);
+                int tempstr = Convert.ToInt32(DexterityDrop.SelectedItem.Text);
+                int num = tempRace + tempstr;
+                string total = num.ToString();
+                dexterityTotal.Text = total;
+            }
+            else
+            {
+                dexterityTotal.Text = DexterityDrop.SelectedItem.Text;
+            }
 
         }
 
+        protected void ConstitutionChanged(object sender, EventArgs e)
+        {
+            if(constitutionRacial.Text != "-")
+            {
+                int tempRace = Convert.ToInt32(constitutionRacial.Text);
+                int tempstr = Convert.ToInt32(ConstitutionDrop.SelectedItem.Text);
+                int num = tempRace + tempstr;
+                string total = num.ToString();
+                constitutionTotal.Text = total;
+            }
+            else
+            {
+                constitutionTotal.Text = ConstitutionDrop.SelectedItem.Text;
+            }
+        }
+
+        protected void IntelligenceChanged(object sender, EventArgs e)
+        {
+            if (intelligenceRacial.Text != "-")
+            {
+                int tempRace = Convert.ToInt32(intelligenceRacial.Text);
+                int tempstr = Convert.ToInt32(IntelligenceDrop.SelectedItem.Text);
+                int num = tempRace + tempstr;
+                string total = num.ToString();
+                intelligenceTotal.Text = total;
+            }
+            else
+            {
+                intelligenceTotal.Text = IntelligenceDrop.SelectedItem.Text;
+            }
+        }
+
+        protected void WisdomChanged(object sender, EventArgs e)
+        {
+            if (wisdomRacial.Text != "-")
+            {
+                int tempRace = Convert.ToInt32(wisdomRacial.Text);
+                int tempstr = Convert.ToInt32(WisdomDrop.SelectedItem.Text);
+                int num = tempRace + tempstr;
+                string total = num.ToString();
+                wisdomTotal.Text = total;
+            }
+            else
+            {
+                wisdomTotal.Text = WisdomDrop.SelectedItem.Text;
+            }
+        }
+
+        protected void CharismaChanged(object sender, EventArgs e)
+        {
+            if (charismaRacial.Text != "-")
+            {
+                int tempRace = Convert.ToInt32(charismaRacial.Text);
+                int tempstr = Convert.ToInt32(CharismaDrop.SelectedItem.Text);
+                int num = tempRace + tempstr;
+                string total = num.ToString();
+                charismaTotal.Text = total;
+            }
+            else
+            {
+                charismaTotal.Text = CharismaDrop.SelectedItem.Text;
+            }
+        }
     }
 }
 
