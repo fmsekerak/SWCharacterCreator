@@ -22,6 +22,7 @@ namespace SWCharacterCreator
         
         protected void loadPage()
         {
+            charNames.Add("");
             String connString = System.Configuration.ConfigurationManager.ConnectionStrings["SWCCStr"].ToString();
             conn = new MySql.Data.MySqlClient.MySqlConnection(connString);
             conn.Open();
@@ -141,13 +142,51 @@ namespace SWCharacterCreator
 
         protected void editIndexChanged(object sender, EventArgs e)
         {
+            editName.Visible = false;
+            editSpecies.Visible = false;
+            editClass.Visible = false;
+            editMulticlass.Visible = false;
+            editBaseClassLevel.Visible = false;
+            editMulticlassLevel.Visible = false;
+            editAlignment.Visible = false;
+            editBackground.Visible = false;
             editAttribute.Visible = false;
         }
 
         protected void EditCharacter(object sender, EventArgs e)
         {
-            
-            editAttribute.Visible = true;
+            attributeEdit = EditAttributeList.SelectedItem.Text;
+            switch (attributeEdit)
+            {
+                case "Name":
+                    editName.Visible = true;
+                    break;
+                case "Species":
+                    editSpecies.Visible = true;
+                    break;
+                case "Base Class":
+                    editClass.Visible = true;
+                    break;
+                case "Base Class Level":
+                    editBaseClassLevel.Visible = true;
+                    break;
+                case "Multiclass":
+                    editMulticlass.Visible = true;
+                    break;
+                case "Multiclass Level":
+                    editMulticlassLevel.Visible = true;
+                    break;
+                case "Alingment":
+                    editAlignment.Visible = true;
+                    break;
+                case "Background":
+                    editBackground.Visible = true;
+                    break;
+                default:
+                    editAttribute.Visible = true;
+                    break;
+
+            }
         }
         
         protected void SubmitEditCharacter(object sender, EventArgs e)
@@ -188,7 +227,7 @@ namespace SWCharacterCreator
             cmd.ExecuteReader();
             conn.Close();
 
-
+            EditAttributeList.ClearSelection();
             displayCharacterSelect.Items.Clear();
             DeleteCharacterSelect.Items.Clear();
             EditCharSelectList.Items.Clear();

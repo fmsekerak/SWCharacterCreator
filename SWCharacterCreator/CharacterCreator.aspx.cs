@@ -35,8 +35,35 @@ namespace SWCharacterCreator
 
             cmd = new MySql.Data.MySqlClient.MySqlCommand(queryStr, conn);
             cmd.ExecuteReader();            
-            conn.Close();   
-            
+            conn.Close();
+
+            submitConfirmation.Text = "Character " + nameField.Text +" Created!";
+
+            nameField.Text = "";
+            speciesSelect.ClearSelection();
+            classSelect.ClearSelection();
+            levelSelect.ClearSelection();
+            alignmentSelect.ClearSelection();
+            StrengthDrop.ClearSelection();
+            strengthTotal.Text = "-";
+            DexterityDrop.ClearSelection();
+            dexterityTotal.Text = "-";
+            ConstitutionDrop.ClearSelection();
+            constitutionTotal.Text = "-";
+            IntelligenceDrop.ClearSelection();
+            intelligenceTotal.Text = "-";
+            WisdomDrop.ClearSelection();
+            wisdomTotal.Text = "-";
+            CharismaDrop.ClearSelection();
+            charismaTotal.Text = "-";
+            strengthRacial.Text = "-";
+            dexterityRacial.Text = "-";
+            constitutionRacial.Text = "-";
+            intelligenceRacial.Text = "-";
+            wisdomRacial.Text = "-";
+            charismaRacial.Text = "-";
+            backgroundSelect.ClearSelection();
+
         }
 
         protected void speciesChanged(object sender, EventArgs e)
