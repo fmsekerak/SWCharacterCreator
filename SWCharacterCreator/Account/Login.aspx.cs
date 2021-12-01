@@ -71,6 +71,7 @@ namespace SWCharacterCreator.Account
                     Session["useremail"] = emailStr;
                     Session["acc_id"] = acc_id;
                     Response.BufferOutput = true;
+                    
                     Response.Redirect("~/CharacterCreator.aspx");
                 }
                 else
