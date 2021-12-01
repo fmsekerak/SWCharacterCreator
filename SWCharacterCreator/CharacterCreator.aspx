@@ -272,7 +272,7 @@
         <asp:ListItem Value="20" Text="Spacer"></asp:ListItem>
         </asp:DropDownList>
 
-        <br />
+        <br /> <br />
 
     <asp:Button OnClick="submitClick" runat="server" ID="submitButton" Text="Submit">
     </asp:Button>

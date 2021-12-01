@@ -52,7 +52,6 @@
                         <li><a runat="server" href="~/">Home</a></li>
                         <li><a runat="server" href="~/CharacterCreator">SW Character Creator</a></li>               
                         <li><a runat="server" href="~/CharacterView">Characters</a></li>
-                        <li><a runat="server" href="~/Contact">Contact</a></li>
                     </ul>
                     <asp:LoginView runat="server" ViewStateMode="Disabled">
                         <AnonymousTemplate>
