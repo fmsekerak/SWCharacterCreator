@@ -46,8 +46,6 @@
     </asp:DropDownList>
     <asp:Label ID="speciesError" runat="server" ForeColor="Red" Visible="false"> Please choose a species. </asp:Label>
 
-        <asp:Label ID="speciesError" runat="server" ForeColor="Red" Visible="false"> Please enter a name. The name cannot match a previously created character. </asp:Label>
-
     <h4> Choose a class: </h4>
     <asp:DropDownList ID="classSelect" name="classSelect" runat="server" OnSelectedIndexChanged="classSelected" AutoPostBack="true">
         <asp:ListItem Value="0" Text=""></asp:ListItem>
