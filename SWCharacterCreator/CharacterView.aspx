@@ -110,6 +110,8 @@
     <asp:Button OnClick="deleteCharacter" ID="deleteCharacterButton" runat="server" Text="Delete">
     </asp:Button>
 
+    <asp:Label ID="deleteConfirmation" runat="server" ForeColor="Green" Visible="false"> Character successfully deleted. </asp:Label>
+
     <br />
     <br />
     <h1>Edit Character</h1>
