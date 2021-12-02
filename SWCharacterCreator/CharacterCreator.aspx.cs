@@ -85,8 +85,8 @@ namespace SWCharacterCreator
             {
                 // No multiclass is selected, proceed as normal
                 queryStr = "INSERT INTO swccdb.characters(charName, charSpecies, charClass, charMulticlass, charLvl, charMulticlassLvl, charAlignment, charStr, charDex, charCon, charInt, charWis, charChar, background, acc_id)" +
-                            "VALUES('" + nameField.Text + "','" + speciesSelect.SelectedItem.Text + "','" + classSelect.SelectedItem.Text + "','NULL','" +
-                            levelSelect.SelectedItem.Text + "','NULL','" + alignmentSelect.SelectedItem.Text + "','" + strengthTotal.Text + "','" + 
+                            "VALUES('" + nameField.Text + "','" + speciesSelect.SelectedItem.Text + "','" + classSelect.SelectedItem.Text + "','-','" +
+                            levelSelect.SelectedItem.Text + "','0','" + alignmentSelect.SelectedItem.Text + "','" + strengthTotal.Text + "','" + 
                             dexterityTotal.Text + "','" + constitutionTotal.Text + "','" +  intelligenceTotal.Text + "','" + wisdomTotal.Text + "','" + 
                             charismaTotal.Text + "','" + backgroundSelect.SelectedItem.Text + "','" + acc_id + "')";
                 cmd = new MySql.Data.MySqlClient.MySqlCommand(queryStr, conn);
@@ -475,8 +475,10 @@ namespace SWCharacterCreator
                 multiclassLevelSelect.Enabled = false;
                 multiclassLevelSelect.ClearSelection();
                 multiclassError.Visible = false;
+            } else
+            {
+                multiclassLevelSelect.Enabled = true;
             }
-            multiclassLevelSelect.Enabled = true;
         }
         protected void multiclassLevelSelected(object sender, EventArgs e)
         {

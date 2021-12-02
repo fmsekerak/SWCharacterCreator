@@ -17,7 +17,7 @@ namespace SWCharacterCreator
         String attributeEdit;
         public String sqlAttribute = "";
         String acc_id;
-        String charName, charSpecies, charClass, charLvl, charAlignment, charStr, charDex, charCon, charInt, charWis, charChar;
+        String charName, charSpecies, charClass, charMulticlass, charLvl, charMulticlassLvl, charAlignment, charStr, charDex, charCon, charInt, charWis, charChar;
         List<string> charNames = new List<string>();
         
         protected void loadPage()
@@ -79,7 +79,9 @@ namespace SWCharacterCreator
                 charName = reader.GetString(reader.GetOrdinal("charName"));
                 charSpecies = reader.GetString(reader.GetOrdinal("charSpecies"));
                 charClass = reader.GetString(reader.GetOrdinal("charClass"));
+                charMulticlass = reader.GetString(reader.GetOrdinal("charMulticlass"));
                 charLvl = reader.GetString(reader.GetOrdinal("charLvl"));
+                charMulticlassLvl = reader.GetString(reader.GetOrdinal("charMulticlassLvl"));
                 charAlignment = reader.GetString(reader.GetOrdinal("charAlignment"));
                 charStr = reader.GetString(reader.GetOrdinal("charStr"));
                 charDex = reader.GetString(reader.GetOrdinal("charDex"));
@@ -103,11 +105,20 @@ namespace SWCharacterCreator
                 DisplayInt.Text = charInt;
                 DisplayWis.Text = charWis;
                 DisplayChar.Text = charChar;
+                if (charMulticlass != "-")
+                {
+                    DisplayMultiClass.Text = charMulticlass;
+                    DisplayMultiLevel.Text = charMulticlassLvl;
+                } else
+                {
+                    DisplayMultiClass.Text = "-";
+                    DisplayMultiLevel.Text = "-";
+                }
+                if (charMulticlassLvl == "0")
+                {
+                    charMulticlassLvl = "-";
+                }
                 Response.BufferOutput = true;
-            }
-            else
-            {
-
             }
 
             reader.Close();
