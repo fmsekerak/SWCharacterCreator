@@ -35,11 +35,13 @@
         <asp:ListItem Value="24" Text="Togruta"></asp:ListItem>
         <asp:ListItem Value="25" Text="Trandoshan"></asp:ListItem>
         <asp:ListItem Value="26" Text="Tusken"></asp:ListItem>
-        <asp:ListItem Value="27" Text="Twi'lek"></asp:ListItem>
+        <asp:ListItem Value="27" Text="Twilek"></asp:ListItem>
         <asp:ListItem Value="28" Text="Weequay"></asp:ListItem>
         <asp:ListItem Value="29" Text="Wookiee"></asp:ListItem>
         <asp:ListItem Value="30" Text="Zabrak"></asp:ListItem>
     </asp:DropDownList>
+
+        <asp:Label ID="speciesError" runat="server" ForeColor="Red" Visible="false"> Please enter a name. The name cannot match a previously created character. </asp:Label>
 
     <h4> Choose a class: </h4>
     <asp:DropDownList ID="classSelect" name="classSelect" runat="server" OnSelectedIndexChanged="classSelected" AutoPostBack="true">

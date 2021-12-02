@@ -173,7 +173,7 @@
         <asp:ListItem Value="24" Text="Togruta"></asp:ListItem>
         <asp:ListItem Value="25" Text="Trandoshan"></asp:ListItem>
         <asp:ListItem Value="26" Text="Tusken"></asp:ListItem>
-        <asp:ListItem Value="27" Text="Twi'lek"></asp:ListItem>
+        <asp:ListItem Value="27" Text="Twilek"></asp:ListItem>
         <asp:ListItem Value="28" Text="Weequay"></asp:ListItem>
         <asp:ListItem Value="29" Text="Wookiee"></asp:ListItem>
         <asp:ListItem Value="30" Text="Zabrak"></asp:ListItem>

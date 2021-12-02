@@ -323,7 +323,7 @@ namespace SWCharacterCreator
                     wisdomRacial.Text = "-";
                     charismaRacial.Text = "-";
                     break;
-                case "Twi'lek":
+                case "Twilek":
                     strengthRacial.Text = "-";
                     dexterityRacial.Text = "1";
                     constitutionRacial.Text = "-";
