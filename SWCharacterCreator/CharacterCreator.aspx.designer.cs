@@ -51,6 +51,33 @@ namespace SWCharacterCreator
         protected global::System.Web.UI.WebControls.DropDownList levelSelect;
 
         /// <summary>
+        /// multiclassSelect control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList multiclassSelect;
+
+        /// <summary>
+        /// multiclassLevelSelect control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList multiclassLevelSelect;
+
+        /// <summary>
+        /// multiclassError control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label multiclassError;
+
+        /// <summary>
         /// alignmentSelect control.
         /// </summary>
         /// <remarks>
@@ -58,6 +85,15 @@ namespace SWCharacterCreator
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList alignmentSelect;
+
+        /// <summary>
+        /// backgroundSelect control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList backgroundSelect;
 
         /// <summary>
         /// AbilityScores control.
@@ -292,15 +328,6 @@ namespace SWCharacterCreator
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TableCell charismaTotal;
-
-        /// <summary>
-        /// backgroundSelect control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList backgroundSelect;
 
         /// <summary>
         /// submitButton control.

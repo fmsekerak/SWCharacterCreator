@@ -13,36 +13,22 @@ namespace SWCharacterCreator
         MySql.Data.MySqlClient.MySqlCommand cmd;
         String queryStr;
         String acc_id;
+        Boolean multiFlag = false;
 
         protected void Page_Load(object sender, EventArgs e)
         {
         
         }
 
-        protected void submitClick(object sender, EventArgs e)
+        protected void clearForm()
         {
-            
-            String connString = System.Configuration.ConfigurationManager.ConnectionStrings["SWCCStr"].ToString();
-            conn = new MySql.Data.MySqlClient.MySqlConnection(connString);
-            conn.Open();
-
-            acc_id = (String)Session["acc_id"];
-
-            queryStr = "INSERT INTO swccdb.characters(charName, charSpecies, charClass, charLvl, charAlignment, charStr, charDex, charCon, charInt, charWis, charChar, background, acc_id)" +
-            "VALUES('" + nameField.Text + "','" + speciesSelect.SelectedItem.Text + "','" + classSelect.SelectedItem.Text + "','" + levelSelect.SelectedItem.Text + "','" + alignmentSelect.SelectedItem.Text + 
-            "','" + strengthTotal.Text + "','" + dexterityTotal.Text + "','" + constitutionTotal.Text + "','" + 
-            intelligenceTotal.Text + "','" + wisdomTotal.Text + "','" + charismaTotal.Text + "','" + backgroundSelect.SelectedItem.Text + "','" + acc_id + "')";
-
-            cmd = new MySql.Data.MySqlClient.MySqlCommand(queryStr, conn);
-            cmd.ExecuteReader();            
-            conn.Close();
-
-            submitConfirmation.Text = "Character " + nameField.Text +" Created!";
-
             nameField.Text = "";
             speciesSelect.ClearSelection();
             classSelect.ClearSelection();
+            multiclassSelect.ClearSelection();
             levelSelect.ClearSelection();
+            multiclassLevelSelect.ClearSelection();
+            multiclassError.Visible = false;
             alignmentSelect.ClearSelection();
             StrengthDrop.ClearSelection();
             strengthTotal.Text = "-";
@@ -63,7 +49,53 @@ namespace SWCharacterCreator
             wisdomRacial.Text = "-";
             charismaRacial.Text = "-";
             backgroundSelect.ClearSelection();
+        }
 
+        protected void submitClick(object sender, EventArgs e)
+        {
+            
+            String connString = System.Configuration.ConfigurationManager.ConnectionStrings["SWCCStr"].ToString();
+            conn = new MySql.Data.MySqlClient.MySqlConnection(connString);
+            conn.Open();
+
+            acc_id = (String)Session["acc_id"];
+            
+            if (Convert.ToInt16(multiclassSelect.SelectedValue) > 0 && Convert.ToInt32(multiclassLevelSelect.SelectedValue) > 0)
+            {
+                // Multiclass is created and a level is selected.
+                queryStr = "INSERT INTO swccdb.characters(charName, charSpecies, charClass, charMulticlass, charLvl, charMulticlassLvl, charAlignment, charStr, charDex, charCon, charInt, charWis, charChar, background, acc_id)" +
+                            "VALUES('" + nameField.Text + "','" + speciesSelect.SelectedItem.Text + "','" + classSelect.SelectedItem.Text + "','" + multiclassSelect.SelectedItem.Text + "','" +
+                            levelSelect.SelectedItem.Text + "','" + multiclassLevelSelect.SelectedItem.Text + "','" + alignmentSelect.SelectedItem.Text + "','" + strengthTotal.Text + "','" +
+                            dexterityTotal.Text + "','" + constitutionTotal.Text + "','" + intelligenceTotal.Text + "','" + wisdomTotal.Text + "','" +
+                            charismaTotal.Text + "','" + backgroundSelect.SelectedItem.Text + "','" + acc_id + "')";
+                cmd = new MySql.Data.MySqlClient.MySqlCommand(queryStr, conn);
+                cmd.ExecuteReader();
+                conn.Close();
+
+                submitConfirmation.Text = "Character " + nameField.Text + " Created!";
+                clearForm();
+
+            } else if (Convert.ToInt16(multiclassSelect.SelectedValue) > 0 && Convert.ToInt32(multiclassLevelSelect.SelectedValue) == 0)
+            {
+                // Multiclass is selected, but a multiclass level is NOT selected.
+                conn.Close();
+                multiclassError.Visible = true;
+
+            } else
+            {
+                // No multiclass is selected, proceed as normal
+                queryStr = "INSERT INTO swccdb.characters(charName, charSpecies, charClass, charMulticlass, charLvl, charMulticlassLvl, charAlignment, charStr, charDex, charCon, charInt, charWis, charChar, background, acc_id)" +
+                            "VALUES('" + nameField.Text + "','" + speciesSelect.SelectedItem.Text + "','" + classSelect.SelectedItem.Text + "','NULL','" +
+                            levelSelect.SelectedItem.Text + "','NULL','" + alignmentSelect.SelectedItem.Text + "','" + strengthTotal.Text + "','" + 
+                            dexterityTotal.Text + "','" + constitutionTotal.Text + "','" +  intelligenceTotal.Text + "','" + wisdomTotal.Text + "','" + 
+                            charismaTotal.Text + "','" + backgroundSelect.SelectedItem.Text + "','" + acc_id + "')";
+                cmd = new MySql.Data.MySqlClient.MySqlCommand(queryStr, conn);
+                cmd.ExecuteReader();            
+                conn.Close();
+
+                submitConfirmation.Text = "Character " + nameField.Text + " Created!";
+                clearForm();
+            }
         }
 
         protected void speciesChanged(object sender, EventArgs e)
@@ -423,6 +455,32 @@ namespace SWCharacterCreator
             {
                 charismaTotal.Text = CharismaDrop.SelectedItem.Text;
             }
+        }
+
+        protected void classSelected(object sender, EventArgs e)
+        {
+            
+        }
+
+        protected void levelSelected(object sender, EventArgs e)
+        {
+            multiclassSelect.Enabled = true;
+            multiclassSelect.Items.RemoveAt(classSelect.SelectedIndex);
+        }
+
+        protected void multiclassSelected(object sender, EventArgs e)
+        {
+            if (multiclassSelect.SelectedItem.Text == "")
+            {
+                multiclassLevelSelect.Enabled = false;
+                multiclassLevelSelect.ClearSelection();
+                multiclassError.Visible = false;
+            }
+            multiclassLevelSelect.Enabled = true;
+        }
+        protected void multiclassLevelSelected(object sender, EventArgs e)
+        {
+            multiclassError.Visible = false;
         }
     }
 }

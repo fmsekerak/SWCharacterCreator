@@ -227,6 +227,14 @@ namespace SWCharacterCreator
             cmd.ExecuteReader();
             conn.Close();
 
+            editName.Visible = false;
+            editSpecies.Visible = false;
+            editClass.Visible = false;
+            editMulticlass.Visible = false;
+            editBaseClassLevel.Visible = false;
+            editMulticlassLevel.Visible = false;
+            editAlignment.Visible = false;
+
             EditAttributeList.ClearSelection();
             displayCharacterSelect.Items.Clear();
             DeleteCharacterSelect.Items.Clear();
