@@ -10,10 +10,12 @@ namespace SWCharacterCreator
     public partial class CharacterCreator : System.Web.UI.Page
     {
         MySql.Data.MySqlClient.MySqlConnection conn;
+        MySql.Data.MySqlClient.MySqlDataReader reader;
         MySql.Data.MySqlClient.MySqlCommand cmd;
         String queryStr;
         String acc_id;
         Boolean validFlag, nameValid, speciesValid, classValid, levelValid, alignmentValid, backgroundValid, abilityValid = false;
+        List<string> charNames = new List<string>();
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -26,8 +28,10 @@ namespace SWCharacterCreator
             speciesSelect.ClearSelection();
             classSelect.ClearSelection();
             multiclassSelect.ClearSelection();
+            multiclassSelect.Enabled = false;
             levelSelect.ClearSelection();
             multiclassLevelSelect.ClearSelection();
+            multiclassLevelSelect.Enabled = false;
             multiclassError.Visible = false;
             alignmentSelect.ClearSelection();
             StrengthDrop.ClearSelection();
@@ -131,6 +135,39 @@ namespace SWCharacterCreator
                 abilityValid = true;
             }
 
+            String connString = System.Configuration.ConfigurationManager.ConnectionStrings["SWCCStr"].ToString();
+            conn = new MySql.Data.MySqlClient.MySqlConnection(connString);
+            conn.Open();
+
+            acc_id = (String)Session["acc_id"];
+
+            // Name conflict validation
+            queryStr = "SELECT charName FROM swccdb.characters " +
+                "WHERE acc_id='" + acc_id + "'";
+
+            cmd = new MySql.Data.MySqlClient.MySqlCommand(queryStr, conn);
+            reader = cmd.ExecuteReader();
+
+            while (reader.HasRows && reader.Read())
+            {
+                charNames.Add(reader.GetString(reader.GetOrdinal("charName")));
+            }
+
+            reader.Close();
+            conn.Close();
+
+            if (charNames.Contains(nameField.Text))
+            {
+                nameValid = false;
+                nameConflict.Visible = true;
+
+            } else
+            {
+                nameValid = true;
+                nameConflict.Visible = false;
+            }
+
+            // Master Validation
             if (nameValid && speciesValid && classValid && levelValid && alignmentValid && backgroundValid && abilityValid)
             {
                 validFlag = true;
@@ -139,12 +176,9 @@ namespace SWCharacterCreator
                 validFlag = false;
             }
 
-            String connString = System.Configuration.ConfigurationManager.ConnectionStrings["SWCCStr"].ToString();
             conn = new MySql.Data.MySqlClient.MySqlConnection(connString);
             conn.Open();
 
-            acc_id = (String)Session["acc_id"];
-            
             if (Convert.ToInt16(multiclassSelect.SelectedValue) > 0 && Convert.ToInt32(multiclassLevelSelect.SelectedValue) > 0 && validFlag)
             {
                 // Multiclass is created and a level is selected.

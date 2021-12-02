@@ -8,6 +8,7 @@
     <h4> Character Name: </h4> 
     <asp:TextBox id="nameField" runat="server"/><br/>
     <asp:Label ID="nameError" runat="server" ForeColor="Red" Visible="false"> Please enter a name. </asp:Label>
+    <asp:Label ID="nameConflict" runat="server" ForeColor="Red" Visible="false"> Character already exists on account. Choose another name. </asp:Label>
 
     <h4> Choose a species: </h4>
     <asp:DropDownList ID="speciesSelect" name="speciesSelect" runat="server" OnSelectedIndexChanged="speciesChanged" AutoPostBack="true">
