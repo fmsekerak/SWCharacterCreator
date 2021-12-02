@@ -24,6 +24,15 @@ namespace SWCharacterCreator
         protected global::System.Web.UI.WebControls.TextBox nameField;
 
         /// <summary>
+        /// nameError control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label nameError;
+
+        /// <summary>
         /// speciesSelect control.
         /// </summary>
         /// <remarks>
@@ -31,6 +40,15 @@ namespace SWCharacterCreator
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList speciesSelect;
+
+        /// <summary>
+        /// speciesError control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label speciesError;
 
         /// <summary>
         /// classSelect control.
@@ -42,6 +60,15 @@ namespace SWCharacterCreator
         protected global::System.Web.UI.WebControls.DropDownList classSelect;
 
         /// <summary>
+        /// classError control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label classError;
+
+        /// <summary>
         /// levelSelect control.
         /// </summary>
         /// <remarks>
@@ -49,6 +76,15 @@ namespace SWCharacterCreator
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList levelSelect;
+
+        /// <summary>
+        /// levelError control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label levelError;
 
         /// <summary>
         /// multiclassSelect control.
@@ -87,6 +123,15 @@ namespace SWCharacterCreator
         protected global::System.Web.UI.WebControls.DropDownList alignmentSelect;
 
         /// <summary>
+        /// alignmentError control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label alignmentError;
+
+        /// <summary>
         /// backgroundSelect control.
         /// </summary>
         /// <remarks>
@@ -94,6 +139,15 @@ namespace SWCharacterCreator
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList backgroundSelect;
+
+        /// <summary>
+        /// backgroundError control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label backgroundError;
 
         /// <summary>
         /// AbilityScores control.
@@ -328,6 +382,15 @@ namespace SWCharacterCreator
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TableCell charismaTotal;
+
+        /// <summary>
+        /// abilityError control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label abilityError;
 
         /// <summary>
         /// submitButton control.

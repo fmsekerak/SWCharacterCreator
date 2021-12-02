@@ -4,8 +4,11 @@
     <h2>Character Creator</h2>
 
     <p> Welcome to the Star Wars 5e Character Creator. Please fill out the below form to create your character!</p> <br />
+
     <h4> Character Name: </h4> 
-    <asp:TextBox id="nameField" runat="server"/> <br/>
+    <asp:TextBox id="nameField" runat="server"/><br/>
+    <asp:Label ID="nameError" runat="server" ForeColor="Red" Visible="false"> Please enter a name. </asp:Label>
+
     <h4> Choose a species: </h4>
     <asp:DropDownList ID="speciesSelect" name="speciesSelect" runat="server" OnSelectedIndexChanged="speciesChanged" AutoPostBack="true">
         <asp:ListItem Value="0" Text=""></asp:ListItem>
@@ -35,11 +38,12 @@
         <asp:ListItem Value="24" Text="Togruta"></asp:ListItem>
         <asp:ListItem Value="25" Text="Trandoshan"></asp:ListItem>
         <asp:ListItem Value="26" Text="Tusken"></asp:ListItem>
-        <asp:ListItem Value="27" Text="Twi'lek"></asp:ListItem>
+        <asp:ListItem Value="27" Text="Twilek"></asp:ListItem>
         <asp:ListItem Value="28" Text="Weequay"></asp:ListItem>
         <asp:ListItem Value="29" Text="Wookiee"></asp:ListItem>
         <asp:ListItem Value="30" Text="Zabrak"></asp:ListItem>
     </asp:DropDownList>
+    <asp:Label ID="speciesError" runat="server" ForeColor="Red" Visible="false"> Please choose a species. </asp:Label>
 
     <h4> Choose a class: </h4>
     <asp:DropDownList ID="classSelect" name="classSelect" runat="server" OnSelectedIndexChanged="classSelected" AutoPostBack="true">
@@ -55,6 +59,7 @@
         <asp:ListItem Value="9" Text="Scout"></asp:ListItem>
         <asp:ListItem Value="10" Text="Sentinel"></asp:ListItem>
     </asp:DropDownList>
+    <asp:Label ID="classError" runat="server" ForeColor="Red" Visible="false"> Please choose a class. </asp:Label>
 
     <h4> Choose a level: </h4>
     <asp:DropDownList ID="levelSelect" name="levelSelect" runat="server" OnSelectedIndexChanged="levelSelected" AutoPostBack="true">
@@ -80,6 +85,8 @@
         <asp:ListItem Value="19" Text="19"></asp:ListItem>
         <asp:ListItem Value="20" Text="20"></asp:ListItem>
     </asp:DropDownList>
+        
+    <asp:Label ID="levelError" runat="server" ForeColor="Red" Visible="false"> Please choose a class level. </asp:Label>
 
     <h4> Choose a Multiclass (optional):</h4>
     <asp:DropDownList ID="multiclassSelect" name="multiclassSelect" runat="server" OnSelectedIndexChanged="multiclassSelected" AutoPostBack="true" Enabled="false">
@@ -136,6 +143,7 @@
         <asp:ListItem Value="8" Text="Chaotic Balanced"></asp:ListItem>
         <asp:ListItem Value="9" Text="Chaotic Dark"></asp:ListItem>
     </asp:DropDownList>
+    <asp:Label ID="alignmentError" runat="server" ForeColor="Red" Visible="false"> Please choose an alignment. </asp:Label>
 
     <br />
 
@@ -163,6 +171,7 @@
         <asp:ListItem Value="19" Text="Soldier"></asp:ListItem>
         <asp:ListItem Value="20" Text="Spacer"></asp:ListItem>
     </asp:DropDownList>
+    <asp:Label ID="backgroundError" runat="server" ForeColor="Red" Visible="false"> Please choose a background. </asp:Label>
 
     <h4> Choose Ability Scores: </h4>
     <asp:Table ID="AbilityScores" runat="Server" BorderColor="Sandybrown" BorderStyle="Solid" BorderWidth="2" Height="100" Width="600">
@@ -314,6 +323,10 @@
     </asp:Table>
 
     <br/>
+        
+    <asp:Label ID="abilityError" runat="server" ForeColor="Red" Visible="false"> Please choose a value for every ability score. </asp:Label>
+
+    <br />
 
     <asp:Button OnClick="submitClick" runat="server" ID="submitButton" Text="Create Character">
     </asp:Button>
