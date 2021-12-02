@@ -87,6 +87,24 @@ namespace SWCharacterCreator
         protected global::System.Web.UI.WebControls.TableCell R1C4;
 
         /// <summary>
+        /// multi control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TableCell multi;
+
+        /// <summary>
+        /// multilvl control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TableCell multilvl;
+
+        /// <summary>
         /// R1C5 control.
         /// </summary>
         /// <remarks>
@@ -193,6 +211,24 @@ namespace SWCharacterCreator
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TableCell DisplayLevel;
+
+        /// <summary>
+        /// DisplayMultiClass control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TableCell DisplayMultiClass;
+
+        /// <summary>
+        /// DisplayMultiLevel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TableCell DisplayMultiLevel;
 
         /// <summary>
         /// DisplayAlignment control.

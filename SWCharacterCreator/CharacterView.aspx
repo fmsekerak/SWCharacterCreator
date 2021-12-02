@@ -27,6 +27,12 @@
            <asp:TableCell ID="R1C4" BorderColor="SandyBrown" BorderWidth="2" runat="server" HorizontalAlign="Center">
                Level
            </asp:TableCell>
+           <asp:TableCell ID="multi" BorderColor="SandyBrown" BorderWidth="2" runat="server" HorizontalAlign="Center">
+               Multiclass
+           </asp:TableCell>
+           <asp:TableCell ID="multilvl" BorderColor="SandyBrown" BorderWidth="2" runat="server" HorizontalAlign="Center">
+               Multi Level
+           </asp:TableCell>
            <asp:TableCell ID="R1C5" BorderColor="SandyBrown" BorderWidth="2" runat="server" HorizontalAlign="Center">
                Alignment
            </asp:TableCell>
@@ -60,6 +66,12 @@
                -
            </asp:TableCell>
            <asp:TableCell ID="DisplayLevel" BorderColor="SandyBrown" BorderWidth="2" runat="server" HorizontalAlign="Center">
+               -
+           </asp:TableCell>
+           <asp:TableCell ID="DisplayMultiClass" BorderColor="SandyBrown" BorderWidth="2" runat="server" HorizontalAlign="Center">
+               -
+           </asp:TableCell>
+           <asp:TableCell ID="DisplayMultiLevel" BorderColor="SandyBrown" BorderWidth="2" runat="server" HorizontalAlign="Center">
                -
            </asp:TableCell>
            <asp:TableCell ID="DisplayAlignment" BorderColor="SandyBrown" BorderWidth="2" runat="server" HorizontalAlign="Center">
