@@ -299,7 +299,7 @@
         <asp:ListItem Value="20" Text="Spacer"></asp:ListItem>
     </asp:DropDownList>
 
-     <asp:DropDownList ID="editAttribute" runat="server" Visible="false">
+     <asp:DropDownList ID="editAbility" runat="server" Visible="false">
         <asp:ListItem Value="0" Text=""></asp:ListItem>
         <asp:ListItem Value="1" Text="8"></asp:ListItem>
         <asp:ListItem Value="2" Text="10"></asp:ListItem>

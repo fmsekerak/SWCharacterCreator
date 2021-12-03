@@ -53,6 +53,7 @@ namespace SWCharacterCreator
             wisdomRacial.Text = "-";
             charismaRacial.Text = "-";
             backgroundSelect.ClearSelection();
+
         }
 
         protected void submitClick(object sender, EventArgs e)

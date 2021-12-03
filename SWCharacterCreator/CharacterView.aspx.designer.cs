@@ -312,6 +312,15 @@ namespace SWCharacterCreator
         protected global::System.Web.UI.WebControls.Button deleteCharacterButton;
 
         /// <summary>
+        /// deleteConfirmation control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label deleteConfirmation;
+
+        /// <summary>
         /// EditCharSelectList control.
         /// </summary>
         /// <remarks>
@@ -411,13 +420,13 @@ namespace SWCharacterCreator
         protected global::System.Web.UI.WebControls.DropDownList editBackground;
 
         /// <summary>
-        /// editAttribute control.
+        /// editAbility control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList editAttribute;
+        protected global::System.Web.UI.WebControls.DropDownList editAbility;
 
         /// <summary>
         /// SubmitEditButton control.
