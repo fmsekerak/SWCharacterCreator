@@ -16,10 +16,10 @@ namespace SWCharacterCreator
         String acc_id;
         Boolean validFlag, nameValid, speciesValid, classValid, levelValid, alignmentValid, backgroundValid, abilityValid = false;
         List<string> charNames = new List<string>();
+        List<string> classes = new List<string>();
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
         }
 
         protected void clearForm()
@@ -53,6 +53,16 @@ namespace SWCharacterCreator
             wisdomRacial.Text = "-";
             charismaRacial.Text = "-";
             backgroundSelect.ClearSelection();
+            multiclassSelect.Items.Clear();
+            classes.Clear();
+            foreach (ListItem classIndex in classSelect.Items)
+            {
+                classes.Add(classIndex.ToString());
+            }
+            foreach (String classIndex in classes)
+            {
+                multiclassSelect.Items.Add(classIndex);
+            }
 
         }
 
